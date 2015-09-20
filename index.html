@@ -107,8 +107,6 @@
 					        
 								<a class="weibo" target="_blank" href="/#" title="weibo">weibo</a>
 					        
-								<a class="rss" target="_blank" href="/#" title="rss">rss</a>
-					        
 								<a class="zhihu" target="_blank" href="/#" title="zhihu">zhihu</a>
 					        
 						</div>
@@ -118,7 +116,7 @@
 				
 				<section class="switch-part switch-part2">
 					<div class="widget tagcloud" id="js-tagcloud">
-						<a href="/tags/个人/" style="font-size: 10px;">个人</a> <a href="/tags/异形数/" style="font-size: 10px;">异形数</a> <a href="/tags/日志/" style="font-size: 10px;">日志</a> <a href="/tags/算法/" style="font-size: 10px;">算法</a>
+						<a href="/tags/JAVA/" style="font-size: 10px;">JAVA</a> <a href="/tags/个人/" style="font-size: 20px;">个人</a> <a href="/tags/异形数/" style="font-size: 10px;">异形数</a> <a href="/tags/日志/" style="font-size: 10px;">日志</a> <a href="/tags/源码分析/" style="font-size: 10px;">源码分析</a> <a href="/tags/算法/" style="font-size: 10px;">算法</a>
 					</div>
 				</section>
 				
@@ -193,8 +191,6 @@
 			        
 						<a class="weibo" target="_blank" href="/#" title="weibo">weibo</a>
 			        
-						<a class="rss" target="_blank" href="/#" title="rss">rss</a>
-			        
 						<a class="zhihu" target="_blank" href="/#" title="zhihu">zhihu</a>
 			        
 				</div>
@@ -204,11 +200,132 @@
 </nav>
       <div class="body-wrap">
   
+    <article id="post-HashMap源码分析" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2015/09/20/HashMap源码分析/" class="article-date">
+  	<time datetime="2015-09-19T16:00:00.000Z" itemprop="datePublished">2015-09-20</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2015/09/20/HashMap源码分析/">HashMap源码分析</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>HashMap继承了AbstractMap，并实现了Map，同时可以序列化和克隆<br>1.HashMap构造函数：         HashMap有两个需要掌握的变量。capacity(容量),load_factor(加载因子),capacity的初始化值为16，load_factor为0.75.源码中有这么一句注释:The default initial capacity - MUST be a power of two也就是capacity必须是2的倍数。capacity顾名思义就是HashMap中数组长度,最大值是1&lt;&lt;30，而load_factor表示当使用超过容量的0.75时，将会自动扩容。并且扩容后的大小也必须是2的倍数(The table, resized as necessary. Length MUST Always be a power of two)。</p>
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JAVA/">JAVA</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/源码分析/">源码分析</a></li></ul>
+	</div>
+
+      
+	<div class="article-category tagcloud">
+	<a class="article-category-link" href="/categories/JAVA源码分析/">JAVA源码分析</a>
+	</div>
+
+
+      
+        <p class="article-more-link">
+          <a  href="/2015/09/20/HashMap源码分析/#more">more >></a>
+        </p>
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+  
+    <article id="post-aboutme" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2015/08/22/aboutme/" class="article-date">
+  	<time datetime="2015-08-22T13:25:33.638Z" itemprop="datePublished">2015-08-22</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2015/08/22/aboutme/">aboutme</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>个人信息：<br>        邮箱：xxxxx@xxxx.com<br>        qq  : xxxxxxxx</p>
+
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/个人/">个人</a></li></ul>
+	</div>
+
+      
+	<div class="article-category tagcloud">
+	<a class="article-category-link" href="/categories/aboutme/">aboutme</a>
+	</div>
+
+
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+  
     <article id="post-关于我" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
       <a href="/2015/08/22/关于我/" class="article-date">
-  	<time datetime="2015-08-21T16:00:00.000Z" itemprop="datePublished">2015-08-22</time>
+  	<time datetime="2015-08-22T12:48:08.578Z" itemprop="datePublished">2015-08-22</time>
 </a>
     </div>
   
@@ -230,7 +347,7 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>这是关于<strong>我的</strong></p>
+        <p>这里什么都没有</p>
 
       
     </div>

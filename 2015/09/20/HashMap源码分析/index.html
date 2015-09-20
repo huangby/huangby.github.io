@@ -3,17 +3,18 @@
 <head>
   <meta charset="utf-8">
   
-  <title>Tag: 个人 | wizard&#39;s blog</title>
+  <title>HashMap源码分析 | wizard&#39;s blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description">
-<meta property="og:type" content="website">
-<meta property="og:title" content="wizard's blog">
-<meta property="og:url" content="http://huangby.github.io/tags/个人/index.html">
+  <meta name="description" content="HashMap继承了AbstractMap，并实现了Map，同时可以序列化和克隆1.HashMap构造函数：         HashMap有两个需要掌握的变量。capacity(容量),load_factor(加载因子),capacity的初始化值为16，load_factor为0.75.源码中有这么一句注释:The default initial capacity - MUST be a po">
+<meta property="og:type" content="article">
+<meta property="og:title" content="HashMap源码分析">
+<meta property="og:url" content="http://huangby.github.io/2015/09/20/HashMap源码分析/index.html">
 <meta property="og:site_name" content="wizard's blog">
-<meta property="og:description">
+<meta property="og:description" content="HashMap继承了AbstractMap，并实现了Map，同时可以序列化和克隆1.HashMap构造函数：         HashMap有两个需要掌握的变量。capacity(容量),load_factor(加载因子),capacity的初始化值为16，load_factor为0.75.源码中有这么一句注释:The default initial capacity - MUST be a po">
+<meta property="og:updated_time" content="2015-09-20T06:45:51.608Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="wizard's blog">
-<meta name="twitter:description">
+<meta name="twitter:title" content="HashMap源码分析">
+<meta name="twitter:description" content="HashMap继承了AbstractMap，并实现了Map，同时可以序列化和克隆1.HashMap构造函数：         HashMap有两个需要掌握的变量。capacity(容量),load_factor(加载因子),capacity的初始化值为16，load_factor为0.75.源码中有这么一句注释:The default initial capacity - MUST be a po">
   
     <link rel="alternative" href="/atom.xml" title="wizard&#39;s blog" type="application/atom+xml">
   
@@ -198,92 +199,107 @@
 		</header>				
 	</div>
 </nav>
-      <div class="body-wrap">
+      <div class="body-wrap"><article id="post-HashMap源码分析" class="article article-type-post" itemscope itemprop="blogPost">
   
-  
-    
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2015" class="archive-year">2015</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2015/08/22/aboutme/" class="archive-article-date">
-  	<time datetime="2015-08-22T13:25:33.638Z" itemprop="datePublished">8月 22</time>
+    <div class="article-meta">
+      <a href="/2015/09/20/HashMap源码分析/" class="article-date">
+  	<time datetime="2015-09-19T16:00:00.000Z" itemprop="datePublished">2015-09-20</time>
 </a>
-        </div>
-    	 
+    </div>
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2015/08/22/aboutme/">aboutme</a>
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      HashMap源码分析
     </h1>
   
 
-        <div class="article-info info-on-right">
-          
+      </header>
+      
+      <div class="article-info article-info-post">
+        
 	<div class="article-tag tagcloud">
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/个人/">个人</a></li></ul>
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JAVA/">JAVA</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/源码分析/">源码分析</a></li></ul>
 	</div>
 
-          
+        
 	<div class="article-category tagcloud">
-	<a class="article-category-link" href="/categories/aboutme/">aboutme</a>
+	<a class="article-category-link" href="/categories/JAVA源码分析/">JAVA源码分析</a>
 	</div>
 
 
-        </div>
         <div class="clearfix"></div>
-    </header>
+      </div>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>HashMap继承了AbstractMap，并实现了Map，同时可以序列化和克隆<br>1.HashMap构造函数：         HashMap有两个需要掌握的变量。capacity(容量),load_factor(加载因子),capacity的初始化值为16，load_factor为0.75.源码中有这么一句注释:The default initial capacity - MUST be a power of two也就是capacity必须是2的倍数。capacity顾名思义就是HashMap中数组长度,最大值是1&lt;&lt;30，而load_factor表示当使用超过容量的0.75时，将会自动扩容。并且扩容后的大小也必须是2的倍数(The table, resized as necessary. Length MUST Always be a power of two)。</p>
+<a id="more"></a>
+      
+    </div>
+    
   </div>
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="/2015/08/22/aboutme/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">aboutme</div>
+      <strong class="article-nav-caption">></strong>
+    </a>
+  
+</nav>
+
+  
 </article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2015/08/22/关于我/" class="archive-article-date">
-  	<time datetime="2015-08-22T12:48:08.578Z" itemprop="datePublished">8月 22</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2015/08/22/关于我/">关于我</a>
-    </h1>
-  
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/个人/">个人</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/日志/">日志</a></li></ul>
+
+<div class="share">
+	<!-- JiaThis Button BEGIN -->
+	<div class="jiathis_style">
+		<span class="jiathis_txt">分享到：</span>
+		<a class="jiathis_button_tsina"></a>
+		<a class="jiathis_button_cqq"></a>
+		<a class="jiathis_button_douban"></a>
+		<a class="jiathis_button_weixin"></a>
+		<a class="jiathis_button_tumblr"></a>
+		<a href="http://www.jiathis.com/share" class="jiathis jiathis_txt jtico jtico_jiathis" target="_blank"></a>
 	</div>
-
-          
-	<div class="article-category tagcloud">
-	<a class="article-category-link" href="/categories/日志/">日志</a>
-	</div>
+	<script type="text/javascript" src="http://v3.jiathis.com/code/jia.js?uid=1405949716054953" charset="utf-8"></script>
+	<!-- JiaThis Button END -->
+</div>
 
 
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
-  
 
-    
+<div class="duoshuo">
+	<!-- 多说评论框 start -->
+	<div class="ds-thread" data-thread-key="HashMap源码分析" data-title="HashMap源码分析" data-url="http://huangby.github.io/2015/09/20/HashMap源码分析/"></div>
+	<!-- 多说评论框 end -->
+	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+	<script type="text/javascript">
+	var duoshuoQuery = {short_name:"true"};
+	(function() {
+		var ds = document.createElement('script');
+		ds.type = 'text/javascript';ds.async = true;
+		ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+		ds.charset = 'UTF-8';
+		(document.getElementsByTagName('head')[0] 
+		 || document.getElementsByTagName('body')[0]).appendChild(ds);
+	})();
+	</script>
+	<!-- 多说公共JS代码 end -->
+</div>
+
+
+
 
 </div>
       <footer id="footer">
@@ -309,9 +325,9 @@
 		mathjax: true,
 		animate: true,
 		isHome: false,
-		isPost: false,
+		isPost: true,
 		isArchive: false,
-		isTag: true,
+		isTag: false,
 		isCategory: false,
 		open_in_new: false
 	}
