@@ -3,18 +3,24 @@
 <head>
   <meta charset="utf-8">
   
-  <title>异形数 | wizard&#39;s blog</title>
+  <title>学习(转载) | wizard&#39;s blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="在一个长度为n的整形数组a里，除了三个数字只出现一次外，其他的数字都出现了2次。请写程序输出任意一个只出现一次的数字，程序时间和空间复杂度越小越好。例如： a = {1,3,7,9,5,9,4,3,6,1,7}，输出4或5或6">
+  <meta name="description" content="第三阶段：android UI编程
+1、Android开发环境搭建：Android介绍，Android开发环境搭建，第一个Android应用程序，Android应用程序目录结构。2、Android初级控件的使用：
+TextView控件的使用Button控件的使用方法EditText控件的使用方法ImageView的使用方法RadioButton的使用方法       配合RadioGroup使用C">
 <meta property="og:type" content="article">
-<meta property="og:title" content="异形数">
-<meta property="og:url" content="http://huangby.github.io/2015/08/22/异形数/index.html">
+<meta property="og:title" content="学习(转载)">
+<meta property="og:url" content="http://huangby.github.io/2015/09/20/学习/index.html">
 <meta property="og:site_name" content="wizard's blog">
-<meta property="og:description" content="在一个长度为n的整形数组a里，除了三个数字只出现一次外，其他的数字都出现了2次。请写程序输出任意一个只出现一次的数字，程序时间和空间复杂度越小越好。例如： a = {1,3,7,9,5,9,4,3,6,1,7}，输出4或5或6">
-<meta property="og:updated_time" content="2015-09-20T08:04:27.768Z">
+<meta property="og:description" content="第三阶段：android UI编程
+1、Android开发环境搭建：Android介绍，Android开发环境搭建，第一个Android应用程序，Android应用程序目录结构。2、Android初级控件的使用：
+TextView控件的使用Button控件的使用方法EditText控件的使用方法ImageView的使用方法RadioButton的使用方法       配合RadioGroup使用C">
+<meta property="og:updated_time" content="2015-09-20T09:20:15.305Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="异形数">
-<meta name="twitter:description" content="在一个长度为n的整形数组a里，除了三个数字只出现一次外，其他的数字都出现了2次。请写程序输出任意一个只出现一次的数字，程序时间和空间复杂度越小越好。例如： a = {1,3,7,9,5,9,4,3,6,1,7}，输出4或5或6">
+<meta name="twitter:title" content="学习(转载)">
+<meta name="twitter:description" content="第三阶段：android UI编程
+1、Android开发环境搭建：Android介绍，Android开发环境搭建，第一个Android应用程序，Android应用程序目录结构。2、Android初级控件的使用：
+TextView控件的使用Button控件的使用方法EditText控件的使用方法ImageView的使用方法RadioButton的使用方法       配合RadioGroup使用C">
   
     <link rel="alternative" href="/atom.xml" title="wizard&#39;s blog" type="application/atom+xml">
   
@@ -199,11 +205,11 @@
 		</header>				
 	</div>
 </nav>
-      <div class="body-wrap"><article id="post-异形数" class="article article-type-post" itemscope itemprop="blogPost">
+      <div class="body-wrap"><article id="post-学习" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a href="/2015/08/22/异形数/" class="article-date">
-  	<time datetime="2015-08-21T16:00:00.000Z" itemprop="datePublished">2015-08-22</time>
+      <a href="/2015/09/20/学习/" class="article-date">
+  	<time datetime="2015-09-19T16:00:00.000Z" itemprop="datePublished">2015-09-20</time>
 </a>
     </div>
   
@@ -216,7 +222,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      异形数
+      学习(转载)
     </h1>
   
 
@@ -225,12 +231,12 @@
       <div class="article-info article-info-post">
         
 	<div class="article-tag tagcloud">
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/算法/">算法</a></li></ul>
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/android/">android</a></li></ul>
 	</div>
 
         
 	<div class="article-category tagcloud">
-	<a class="article-category-link" href="/categories/算法/">算法</a>
+	<a class="article-category-link" href="/categories/android/">android</a>
 	</div>
 
 
@@ -240,7 +246,25 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>在一个长度为n的整形数组a里，除了三个数字只出现一次外，其他的数字都出现了2次。请写程序输出任意一个只出现一次的数字，程序时间和空间复杂度越小越好。<br>例如： a = {1,3,7,9,5,9,4,3,6,1,7}，输出4或5或6<br><a id="more"></a><br>算法流程：<br>(1). f(x) = x&amp;(-x)   —–&gt;该函数可以得出x从右边开始出现1的位置，比如 f(0x1100) = 0x0100<br>(2).  x = a^b^c<br>(3).  flag = f(x^a)^f(x^b)^f(x^c) 结果必有一位是1，因为flag不可能为0，因此flag在某一位上一定为1<br>       证明： f(x^a),f(x^b),f(x^c)分别表示x^a, x^b, x^c的右边第一个1的位置，并且<br>                 x^a = b^c, x^b=a^c,x^c=a^b<br>                 假设flag的值为0，那么f(x^a),f(x^b),f(x^c)都为0，即x^a, x^b, x^c为0，那么a=b=c矛盾<br>(4). f(x^a)^f(x^b)^f(x^c)的第m位为1，则f(x^a), f(x^b), f(x^c)必有1个或者3个第m位为1，因为只能是  0^0^1=1或者1^1^1=1<br>(5). x^a, x^b, x^c只有一个第m位为1<br>      证明(5) 由于(4)得出，f(x^a), f(x^b), f(x^c)必有1个或者3个第m位为1，(结论1)因此x^a, x^b, x^c的第m位最多是1个为1或者三个为1。因为f(x)表示x的右边第一个为1的位置，那么f(x)值的第m位为1(f(x)中只能有一个1)，也就表示x的第m位也为1.因此f(x)为1的位置和x为1的位置是对应的。假设x^a, x^b, x^c有三个在m位上为1。<br>      1&gt; 如果 x(m) =1 ———&gt;x(m)表示x的m位，下同。<br>           那么必有：a(m) = 0,b(m)=0, c(m)=0.<br>                 并且x(m) = a(m)^b(m)^c(m) = 0 矛盾。<br>      2&gt;如果 x(m) = 0:<br>           那么必有：a(m) = 1,b(m)= 1,c(m) = 1<br>                 并且x(m) = a(m)^b(m)^c(m) = 1 矛盾。<br>      综上所述，x^a, x^b, x^c有三个在m位上为1的假设是不成立的。因此只能有一个。<br>(6)flag = f (f(x^a)^f(x^b)^f(x^c))<br>(7)如果f(x^i) = flag的数都在一组里面，并且包含了所求的值，最后对这组值求异或即得结果。<br>代码如下：<br>int f(int x)<br>{<br>    return x&amp;(-x);<br>}<br>int find(int [] datas)<br>{<br>     int len=datas.length;<br>     int x = 0;<br>     for(int i=0;i&lt;len;i++){<br>          x ^= datas[i];<br>     }<br>     int flag =  0;<br>     for(int i=0;i&lt;len;i++){<br>          flag ^= f(x^datas[i]);<br>     }<br>     int b=0;<br>     for(int i=0;i&lt;len;i++){<br>         if(f(x^datas[i]) == f(flag))<br>               b ^= datas[i];<br>     }<br>     return b;<br>}</p>
+        <p>第三阶段：android UI编程</p>
+<p>1、Android开发环境搭建：Android介绍，Android开发环境搭建，第一个Android应用程序，Android应用程序目录结构。<br>2、Android初级控件的使用：</p>
+<p>TextView控件的使用<br>Button控件的使用方法<br>EditText控件的使用方法<br>ImageView的使用方法<br>RadioButton的使用方法<br>       配合RadioGroup使用<br>Checkbox的使用方法<br><a id="more"></a><br>Menu的使用方法<br>  menu标签没有任何属性，但可以嵌套在item标签中，表示子菜单的形式。不过item标签中不能再嵌入item标签。<br>3、Android高级控件的使用：</p>
+<p>Autocompletion的使用方法<br>ListView的使用方法<br>GridView的使用方法<br>Adapter的使用方法<br>Spinner的使用方法<br>Gallary的使用方法<br>ScrollView的使用方法<br>4、对话框与菜单的使用：</p>
+<p>Dialog的基本概念<br>AlertDialog的使用方法<br>DatePickerDialog的使用方法<br>Menu的使用方法<br>自定义Menu的实现方法<br>5、控件的布局方法：</p>
+<p>线性布局的使用方法<br>相对布局的使用方法<br>表格布局的使用方法<br>6、多Acitivity管理：</p>
+<p>AndroidManifest.xml文件的作用<br>Intent的使用方法<br>使用Intent传递数据的方法<br>启动Activity的方法<br>IntentFilter的使用方法<br>Activity Group的使用方法<br>7、自定义控件实现方法：</p>
+<p>自定义ListView的实现方法<br>可折叠ListView的使用方法<br>自定义Adapter的实现方法<br>自定义View的实现方法<br>动态控件布局的上实现方法</p>
+<p>第四阶段：android网络编程与数据存储</p>
+<p>1、基于Android平台的HTTP通讯：</p>
+<p>Http协议回顾<br>Apache Commons 工具包介绍<br>使用Get方法向服务器提交数据的方法<br>解析服务器响应数据的方法<br>使用POST方法向服务器提交数据的实现方法<br>向服务器提交非文本数据的实现方法<br>使用Http协议实现多线程下载<br>使用Http协议实现断点续传<br>2、Android数据存储技术：</p>
+<p>SQLite3数据库简介<br>SQL语句回顾<br>SQLite3编程接口介绍<br>SQLite3事务管理<br>SQLite3游标使用方法<br>SQLite3性能分析<br>访问SDCard的方法<br>访问SharedPreferences的方法<br>3、ContentProvider使用方法：ContentProvider实现共享数据、URI的解析与UriMatcher、ContentUris的使用、使用ContentResolver操作ContentProvider、ContentProvider的监听Android当中的异步操作：Handler的使用方法；异步任务的基本概念；AsyncTask的使用方法。</p>
+<p>第五阶段：android手机硬件管理</p>
+<p>1、地图及定位技术：GPS简介；LocationManager的使用方法；在Google Map上添加标记的方法；查询某地附近建筑的方法；使用Google Map实现点对点导航。<br>2、传感器使用方法：方向、加速度(重力)、光线、磁场、距离、温度等传感器的使用。<br>3、近场通信技术：NFC技术简介；NFC技术是用场景介绍；NFC技术实现方法。<br>4、媒体管理技术：MediaPlayer的使用方法。<br>5、触摸屏技术：手势识别；多点触摸技术。</p>
+<p>第六阶段：Android图形编程技术</p>
+<p>1、图形处理基础：2D图形编程基础；<br>2、点、线、面等基本图形元素绘制方法；<br>3、Android动画框架简介；<br>4、位移动画的实现方法；<br>5、淡入淡出动画的实现方法；<br>6、旋转动画的实现方法；<br>7、Matrix的使用方法。</p>
+<p>第七阶段：Android游戏开发</p>
+<p>1、Android游戏开发：Android游戏开发概述；<br>2、SurfaceView的使用方法；<br>3、物理小球技术；<br>4、碰撞检测技术；<br>5、图片、文字和背景音乐等资源的使用方法；<br>6、游戏引擎基础概念；<br>7、Cocoa2d-Android引擎使用方法；<br>8、OpenGL ES使用方法。</p>
+<p>来源：<a href="http://blog.csdn.net/xujing81/article/details/7313507" target="_blank" rel="external">http://blog.csdn.net/xujing81/article/details/7313507</a></p>
 
       
     </div>
@@ -250,15 +274,20 @@
     
 <nav id="article-nav">
   
-    <a href="/2015/09/20/java的byte转十六进制/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2015/09/20/aboutme/" id="article-nav-newer" class="article-nav-link-wrap">
       <strong class="article-nav-caption"><</strong>
       <div class="article-nav-title">
         
-          java的byte转换成十六进制表示
+          aboutme
         
       </div>
     </a>
   
+  
+    <a href="/2015/09/20/android学习/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">android学习</div>
+      <strong class="article-nav-caption">></strong>
+    </a>
   
 </nav>
 
@@ -285,7 +314,7 @@
 
 <div class="duoshuo">
 	<!-- 多说评论框 start -->
-	<div class="ds-thread" data-thread-key="异形数" data-title="异形数" data-url="http://huangby.github.io/2015/08/22/异形数/"></div>
+	<div class="ds-thread" data-thread-key="学习" data-title="学习(转载)" data-url="http://huangby.github.io/2015/09/20/学习/"></div>
 	<!-- 多说评论框 end -->
 	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
 	<script type="text/javascript">

@@ -5,16 +5,16 @@
   
   <title>HashMap源码分析 | wizard&#39;s blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="HashMap继承了AbstractMap，并实现了Map，同时可以序列化和克隆1.HashMap构造函数：         HashMap有两个需要掌握的变量。capacity(容量),load_factor(加载因子),capacity的初始化值为16，load_factor为0.75.源码中有这么一句注释:The default initial capacity - MUST be a po">
+  <meta name="description" content="HashMap继承了AbstractMap，并实现了Map，同时可以序列化和克隆public class HashMap extends AbstractMapimplements Map, Cloneable, SerializableHashMap中有两个需要掌握的变量。capacity(容量),load_factor(加载因子),capacity的初始化值为16，load_factor为0.">
 <meta property="og:type" content="article">
 <meta property="og:title" content="HashMap源码分析">
 <meta property="og:url" content="http://huangby.github.io/2015/09/20/HashMap源码分析/index.html">
 <meta property="og:site_name" content="wizard's blog">
-<meta property="og:description" content="HashMap继承了AbstractMap，并实现了Map，同时可以序列化和克隆1.HashMap构造函数：         HashMap有两个需要掌握的变量。capacity(容量),load_factor(加载因子),capacity的初始化值为16，load_factor为0.75.源码中有这么一句注释:The default initial capacity - MUST be a po">
-<meta property="og:updated_time" content="2015-09-20T06:45:51.608Z">
+<meta property="og:description" content="HashMap继承了AbstractMap，并实现了Map，同时可以序列化和克隆public class HashMap extends AbstractMapimplements Map, Cloneable, SerializableHashMap中有两个需要掌握的变量。capacity(容量),load_factor(加载因子),capacity的初始化值为16，load_factor为0.">
+<meta property="og:updated_time" content="2015-09-20T08:03:20.291Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="HashMap源码分析">
-<meta name="twitter:description" content="HashMap继承了AbstractMap，并实现了Map，同时可以序列化和克隆1.HashMap构造函数：         HashMap有两个需要掌握的变量。capacity(容量),load_factor(加载因子),capacity的初始化值为16，load_factor为0.75.源码中有这么一句注释:The default initial capacity - MUST be a po">
+<meta name="twitter:description" content="HashMap继承了AbstractMap，并实现了Map，同时可以序列化和克隆public class HashMap extends AbstractMapimplements Map, Cloneable, SerializableHashMap中有两个需要掌握的变量。capacity(容量),load_factor(加载因子),capacity的初始化值为16，load_factor为0.">
   
     <link rel="alternative" href="/atom.xml" title="wizard&#39;s blog" type="application/atom+xml">
   
@@ -91,25 +91,25 @@
 					<nav class="header-menu">
 						<ul>
 						
-							<li><a href="/">主页</a></li>
-				        
 							<li><a href="/archives">所有文章</a></li>
 				        
-							<li><a href="/tags/日志">日志</a></li>
+							<li><a href="/tags/JAVA">JAVA</a></li>
 				        
-							<li><a href="/tags/算法">算法</a></li>
+							<li><a href="/tags/Python">Python</a></li>
+				        
+							<li><a href="/tags/Linux">Linux</a></li>
+				        
+							<li><a href="/tags/android">android</a></li>
+				        
+							<li><a href="/tags/mongodb">mongodb</a></li>
+				        
+							<li><a href="/tags/javascript">javascript</a></li>
 				        
 						</ul>
 					</nav>
 					<nav class="header-nav">
 						<div class="social">
 							
-								<a class="github" target="_blank" href="/#" title="github">github</a>
-					        
-								<a class="weibo" target="_blank" href="/#" title="weibo">weibo</a>
-					        
-								<a class="zhihu" target="_blank" href="/#" title="zhihu">zhihu</a>
-					        
 						</div>
 					</nav>
 				</section>
@@ -117,7 +117,7 @@
 				
 				<section class="switch-part switch-part2">
 					<div class="widget tagcloud" id="js-tagcloud">
-						<a href="/tags/JAVA/" style="font-size: 10px;">JAVA</a> <a href="/tags/个人/" style="font-size: 20px;">个人</a> <a href="/tags/异形数/" style="font-size: 10px;">异形数</a> <a href="/tags/日志/" style="font-size: 10px;">日志</a> <a href="/tags/源码分析/" style="font-size: 10px;">源码分析</a> <a href="/tags/算法/" style="font-size: 10px;">算法</a>
+						<a href="/tags/JAVA/" style="font-size: 20px;">JAVA</a> <a href="/tags/Linux/" style="font-size: 10px;">Linux</a> <a href="/tags/Python/" style="font-size: 10px;">Python</a> <a href="/tags/android/" style="font-size: 15px;">android</a> <a href="/tags/javascript/" style="font-size: 10px;">javascript</a> <a href="/tags/java编程思想/" style="font-size: 10px;">java编程思想</a> <a href="/tags/mongodb/" style="font-size: 10px;">mongodb</a> <a href="/tags/正则表达式/" style="font-size: 10px;">正则表达式</a> <a href="/tags/源码分析/" style="font-size: 10px;">源码分析</a> <a href="/tags/算法/" style="font-size: 10px;">算法</a>
 					</div>
 				</section>
 				
@@ -174,13 +174,19 @@
 			<nav class="header-menu">
 				<ul>
 				
-					<li><a href="/">主页</a></li>
-		        
 					<li><a href="/archives">所有文章</a></li>
 		        
-					<li><a href="/tags/日志">日志</a></li>
+					<li><a href="/tags/JAVA">JAVA</a></li>
 		        
-					<li><a href="/tags/算法">算法</a></li>
+					<li><a href="/tags/Python">Python</a></li>
+		        
+					<li><a href="/tags/Linux">Linux</a></li>
+		        
+					<li><a href="/tags/android">android</a></li>
+		        
+					<li><a href="/tags/mongodb">mongodb</a></li>
+		        
+					<li><a href="/tags/javascript">javascript</a></li>
 		        
 		        <div class="clearfix"></div>
 				</ul>
@@ -188,12 +194,6 @@
 			<nav class="header-nav">
 				<div class="social">
 					
-						<a class="github" target="_blank" href="/#" title="github">github</a>
-			        
-						<a class="weibo" target="_blank" href="/#" title="weibo">weibo</a>
-			        
-						<a class="zhihu" target="_blank" href="/#" title="zhihu">zhihu</a>
-			        
 				</div>
 			</nav>
 		</header>				
@@ -230,7 +230,7 @@
 
         
 	<div class="article-category tagcloud">
-	<a class="article-category-link" href="/categories/JAVA源码分析/">JAVA源码分析</a>
+	<a class="article-category-link" href="/categories/JAVA/">JAVA</a>
 	</div>
 
 
@@ -240,8 +240,9 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>HashMap继承了AbstractMap，并实现了Map，同时可以序列化和克隆<br>1.HashMap构造函数：         HashMap有两个需要掌握的变量。capacity(容量),load_factor(加载因子),capacity的初始化值为16，load_factor为0.75.源码中有这么一句注释:The default initial capacity - MUST be a power of two也就是capacity必须是2的倍数。capacity顾名思义就是HashMap中数组长度,最大值是1&lt;&lt;30，而load_factor表示当使用超过容量的0.75时，将会自动扩容。并且扩容后的大小也必须是2的倍数(The table, resized as necessary. Length MUST Always be a power of two)。</p>
-<a id="more"></a>
+        <p>HashMap继承了AbstractMap，并实现了Map，同时可以序列化和克隆<br>public class HashMap<k,v> extends AbstractMap<k,v>implements Map<k,v>, Cloneable, Serializable<br>HashMap中有两个需要掌握的变量。capacity(容量),load_factor(加载因子),capacity的初始化值为16，load_factor为0.75.源码中有这么一句注释:The default initial capacity - MUST be a power of two也就是capacity必须是2的倍数。capacity顾名思义就是HashMap中table数组长度,最大值是1&lt;<30，而load_factor表示当使用超过容量的加载因子倍数时，将会自动扩容。并且扩容后的大小也必须是2的倍数()。 <a="" id="more"><br>一、HashMap构造函数:<br>    public HashMap(int initialCapacity, float loadFactor)<br>    public HashMap(int initialCapacity)<br>    public HashMap()<br>    HashMap没有强制对输入的initialCapacity满足2的倍数。而是使用如下的代码将capacity变成最接近initialCapacity并且满足2的倍数的值。<br>    // Find a power of 2 &gt;= initialCapacity<br>    int capacity = 1;<br>    while (capacity &lt; initialCapacity)<br>          capacity &lt;&lt;= 1;<br>    ……<br>    table = new Entry[capacity];<br>    因此对于需要初始化容量的时候，有可能真正的容量不是我们初始化的值。</30，而load_factor表示当使用超过容量的加载因子倍数时，将会自动扩容。并且扩容后的大小也必须是2的倍数()。></k,v></k,v></k,v></p>
+<p>二、Hash值计算<br>    对于HashMap来说，hash值对于减少冲突很重要。<br>    final int hash(Object k) {<br>        int h = hashSeed;<br>        if (k instanceof String) {<br>            return ((String)k).hash32();<br>        }<br>        h ^= k.hashCode();<br>        // This function ensures that hashCodes that differ only by<br>        // constant multiples at each bit position have a bounded<br>        // number of collisions (approximately 8 at default load factor).<br>        h ^= (h &gt;&gt;&gt; 20) ^ (h &gt;&gt;&gt; 12);<br>        return h ^ (h &gt;&gt;&gt; 7) ^ (h &gt;&gt;&gt; 4);<br>    }<br>三、get()<br>    HashMap的get方法主要调用getEntry方法：<br>    final Entry<k,v> getEntry(Object key) {<br>        int hash = (key == null) ? 0 : hash(key);<br>        for (Entry&lt;?,?&gt; e = table[indexFor(hash, table.length)];<br>             e != null;<br>             e = e.next) {<br>            Object k;<br>            if (e.hash == hash &amp;&amp;<br>                ((k = e.key) == key || (key != null &amp;&amp; key.equals(k))))<br>                return (Entry<k,v>)e;<br>        }<br>        return null;<br>    }<br>    从代码可以看出，如果Key为null则将取下标为0的位置的值，这里就隐含了两点：<br>    1.HashMap允许key为null<br>    2.HashMap数组中0号位置保存是key为null的值<br>    接下来就是变量链表了(如果有)<br>四、put()<br>    public V put(K key, V value) {<br>        if (key == null)<br>            return putForNullKey(value);<br>        int hash = hash(key);<br>        int i = indexFor(hash, table.length);<br>        @SuppressWarnings(“unchecked”)<br>        Entry<k,v> e = (Entry<k,v>)table[i];<br>        for(; e != null; e = e.next) {<br>            Object k;<br>            if (e.hash == hash &amp;&amp; ((k = e.key) == key || key.equals(k))) {<br>                V oldValue = e.value;<br>                e.value = value;<br>                e.recordAccess(this);<br>                return oldValue;<br>            }<br>        }<br>        modCount++;<br>        addEntry(hash, key, value, i);<br>        return null;<br>    }<br>    同上述一样，key为null同样保存在0号位置<br>    首先要查找是否有相同的key，如果存在将会替换掉老的值，不存在的话，将值添加在链表头。<br>HashMap还有其他很多的方法，这里只是简单的分析了一下常用的get和put方法。</k,v></k,v></k,v></k,v></p>
+
       
     </div>
     
@@ -250,9 +251,18 @@
     
 <nav id="article-nav">
   
+    <a href="/2015/09/20/路线/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption"><</strong>
+      <div class="article-nav-title">
+        
+          路线(转)
+        
+      </div>
+    </a>
   
-    <a href="/2015/08/22/aboutme/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">aboutme</div>
+  
+    <a href="/2015/09/20/java的byte转十六进制/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">java的byte转换成十六进制表示</div>
       <strong class="article-nav-caption">></strong>
     </a>
   

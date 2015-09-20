@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>javascript权威指南 | wizard&#39;s blog</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="第二章词法结构1.区分大小写（HTML并不区分大小写，尽管XHTML区分大小写）直接量：包括正则表达式直接量，空（null）
+字母、下划线(_)、美元符号($)开始 可以省略分号">
+<meta property="og:type" content="article">
+<meta property="og:title" content="javascript权威指南">
+<meta property="og:url" content="http://huangby.github.io/2015/09/20/javascript权威指南/index.html">
+<meta property="og:site_name" content="wizard's blog">
+<meta property="og:description" content="第二章词法结构1.区分大小写（HTML并不区分大小写，尽管XHTML区分大小写）直接量：包括正则表达式直接量，空（null）
+字母、下划线(_)、美元符号($)开始 可以省略分号">
+<meta property="og:updated_time" content="2015-09-20T08:49:25.550Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="javascript权威指南">
+<meta name="twitter:description" content="第二章词法结构1.区分大小写（HTML并不区分大小写，尽管XHTML区分大小写）直接量：包括正则表达式直接量，空（null）
+字母、下划线(_)、美元符号($)开始 可以省略分号">
+  
+    <link rel="alternative" href="/atom.xml" title="wizard&#39;s blog" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  <link rel="stylesheet" href="/css/style.css" type="text/css">
+</head>
+<body>
+  <div id="container">
+    <div class="left-col">
+    <div class="overlay"></div>
+<div class="intrude-less">
+	<header id="header" class="inner">
+		<a href="/" class="profilepic">
+			
+			<img lazy-src="/favicon.jpg" class="js-avatar">
+			
+		</a>
+
+		<hgroup>
+		  <h1 class="header-author"><a href="/">wizard</a></h1>
+		</hgroup>
+
+		
+		<p class="header-subtitle">我的这片土地，不卖</p>
+		
+
+		
+			<div class="switch-btn">
+				<div class="icon">
+					<div class="icon-ctn">
+						<div class="icon-wrap icon-house" data-idx="0">
+							<div class="birdhouse"></div>
+							<div class="birdhouse_holes"></div>
+						</div>
+						<div class="icon-wrap icon-ribbon hide" data-idx="1">
+							<div class="ribbon"></div>
+						</div>
+						
+						<div class="icon-wrap icon-link hide" data-idx="2">
+							<div class="loopback_l"></div>
+							<div class="loopback_r"></div>
+						</div>
+						
+						
+						<div class="icon-wrap icon-me hide" data-idx="3">
+							<div class="user"></div>
+							<div class="shoulder"></div>
+						</div>
+						
+					</div>
+					
+				</div>
+				<div class="tips-box hide">
+					<div class="tips-arrow"></div>
+					<ul class="tips-inner">
+						<li>菜单</li>
+						<li>标签</li>
+						
+						<li>友情链接</li>
+						
+						
+						<li>关于我</li>
+						
+					</ul>
+				</div>
+			</div>
+		
+
+		<div class="switch-area">
+			<div class="switch-wrap">
+				<section class="switch-part switch-part1">
+					<nav class="header-menu">
+						<ul>
+						
+							<li><a href="/archives">所有文章</a></li>
+				        
+							<li><a href="/tags/JAVA">JAVA</a></li>
+				        
+							<li><a href="/tags/Python">Python</a></li>
+				        
+							<li><a href="/tags/Linux">Linux</a></li>
+				        
+							<li><a href="/tags/android">android</a></li>
+				        
+							<li><a href="/tags/mongodb">mongodb</a></li>
+				        
+							<li><a href="/tags/javascript">javascript</a></li>
+				        
+						</ul>
+					</nav>
+					<nav class="header-nav">
+						<div class="social">
+							
+						</div>
+					</nav>
+				</section>
+				
+				
+				<section class="switch-part switch-part2">
+					<div class="widget tagcloud" id="js-tagcloud">
+						<a href="/tags/JAVA/" style="font-size: 20px;">JAVA</a> <a href="/tags/Linux/" style="font-size: 10px;">Linux</a> <a href="/tags/Python/" style="font-size: 10px;">Python</a> <a href="/tags/android/" style="font-size: 15px;">android</a> <a href="/tags/javascript/" style="font-size: 10px;">javascript</a> <a href="/tags/java编程思想/" style="font-size: 10px;">java编程思想</a> <a href="/tags/mongodb/" style="font-size: 10px;">mongodb</a> <a href="/tags/正则表达式/" style="font-size: 10px;">正则表达式</a> <a href="/tags/源码分析/" style="font-size: 10px;">源码分析</a> <a href="/tags/算法/" style="font-size: 10px;">算法</a>
+					</div>
+				</section>
+				
+				
+				
+				<section class="switch-part switch-part3">
+					<div id="js-friends">
+					
+			          <a target="_blank" class="main-nav-link switch-friends-link" href="http://localhost:4000/">奥巴马的博客</a>
+			        
+			          <a target="_blank" class="main-nav-link switch-friends-link" href="http://localhost:4000/">卡卡的美丽传说</a>
+			        
+			          <a target="_blank" class="main-nav-link switch-friends-link" href="http://localhost:4000/">本泽马的博客</a>
+			        
+			          <a target="_blank" class="main-nav-link switch-friends-link" href="http://localhost:4000/">吉格斯的博客</a>
+			        
+			          <a target="_blank" class="main-nav-link switch-friends-link" href="http://localhost:4000/">习大大大不同</a>
+			        
+			          <a target="_blank" class="main-nav-link switch-friends-link" href="http://localhost:4000/">托蒂的博客</a>
+			        
+			        </div>
+				</section>
+				
+
+				
+				
+				<section class="switch-part switch-part4">
+				
+					<div id="js-aboutme">我是一名搬运工，每天勤勤恳恳在耕作.....</div>
+				</section>
+				
+			</div>
+		</div>
+	</header>				
+</div>
+    </div>
+    <div class="mid-col">
+      <nav id="mobile-nav">
+  	<div class="overlay">
+  		<div class="slider-trigger"></div>
+  		<h1 class="header-author js-mobile-header hide">wizard</h1>
+  	</div>
+	<div class="intrude-less">
+		<header id="header" class="inner">
+			<div class="profilepic">
+				<img lazy-src="/favicon.jpg" class="js-avatar">
+			</div>
+			<hgroup>
+			  <h1 class="header-author">wizard</h1>
+			</hgroup>
+			
+			<p class="header-subtitle">我的这片土地，不卖</p>
+			
+			<nav class="header-menu">
+				<ul>
+				
+					<li><a href="/archives">所有文章</a></li>
+		        
+					<li><a href="/tags/JAVA">JAVA</a></li>
+		        
+					<li><a href="/tags/Python">Python</a></li>
+		        
+					<li><a href="/tags/Linux">Linux</a></li>
+		        
+					<li><a href="/tags/android">android</a></li>
+		        
+					<li><a href="/tags/mongodb">mongodb</a></li>
+		        
+					<li><a href="/tags/javascript">javascript</a></li>
+		        
+		        <div class="clearfix"></div>
+				</ul>
+			</nav>
+			<nav class="header-nav">
+				<div class="social">
+					
+				</div>
+			</nav>
+		</header>				
+	</div>
+</nav>
+      <div class="body-wrap"><article id="post-javascript权威指南" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2015/09/20/javascript权威指南/" class="article-date">
+  	<time datetime="2015-09-20T08:49:25.550Z" itemprop="datePublished">2015-09-20</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      javascript权威指南
+    </h1>
+  
+
+      </header>
+      
+      <div class="article-info article-info-post">
+        
+	<div class="article-tag tagcloud">
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/javascript/">javascript</a></li></ul>
+	</div>
+
+        
+	<div class="article-category tagcloud">
+	<a class="article-category-link" href="/categories/javascript/">javascript</a>
+	</div>
+
+
+        <div class="clearfix"></div>
+      </div>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>第二章词法结构<br>1.区分大小写（HTML并不区分大小写，尽管XHTML区分大小写）<br>直接量：包括正则表达式直接量，空（null）</p>
+<p>字母、下划线(_)、美元符号($)开始<br> 可以省略分号<br><a id="more"></a><br>第三章类型、值和变量<br>两类：原始类型和对象类型<br>两个特殊的原始值：null（空）和undefined(未定义)<br>对象是属性的集合，每个属性都有“名/值对”（java有提到过，类是对象的集合），因此可以这样理解<br>                                             聚集                               聚集<br>                              属性——————&gt;对象———————–&gt;类<br>                                           javascript                          java<br>javascript也可以实现自动垃圾回收（GC）<br>javascript的数组可以直接调用起sort方法，而在java中,需要使用Arrays.sort(数组)静态方法;<br>javascript中从技术上讲，只有对象才能有方法，但是数字，字符串，布尔值也可以拥有自己的方法，只有null和undefined是无法拥有方法的值。<br>可以自由地进行数据转换。<br>变量是无类型的<br>数字定义的是64位，然而实际操作是基于32位<br>遇到预算出错时，不会报错，直到溢出，结果会是正（负）无穷大（Infinity(-Infinity)）<br>有“负零”这个概念，但是基本上和零一样，所以很少用到“负零”<br>用NaN表示非数字（比如0/0，无穷大除以无穷大，对负数开平方根或者算术运算符与不是数字或无法转换为数字的操作数一起使用都会产生非数字（NaN））<br>Infinity和NaN这两个值不可修改。<br>无法通过x==NaN来判断x是非数字，应当使用x!=x，这里当且仅当x为NaN时成立，也就是说：非数字与任何值都不等，包括自身。<br>正零值和负零值是想等的。除了作为除数之外，即正无穷和负无穷不等<br>string 是一组16位值组成的不可变的有序序列（这里和java一样，char为16位），但是javascript中并没有表示单个字符。<br>或许认为undefined是系统级的，出乎意料的或者类似错误的值的空缺，而null是表示程序级的，正常的或者在意料之中的值的空缺。<br>在代码的最顶级–不在任何函数内的javascript代码—可以使用javascript关键字this来引用全局对象。<br>字符串，数字等原本没有自身的方法，但是当引用时，会临时创建相应的对象（new String(),new Number()等），这样就可以视为对象就行操作。但是又由于是临时创建，因此当不引用时，将会被销毁，原来的并没有改变。如下：<br>var s=”hello”;<br>s.len=4;//临时创建s的对象，并为之添加len属性并赋值为4，使用完之后，该对象被销毁<br>var t=s.len;//由于上述的对象被销毁，这里将被重新建立新对象，但是此对象并没有len属性，因此将返回undefined<br>（这里有点像java，基本类型都有对应的类）<br>==会做类型转换（部分），===不做类型转换<br>所有的（包装）对象（包括数组和函数）转换为布尔值都为true，因此有new Boolean(false)——&gt;true<br>对象到字符串的转换：<br>先调用toString()方法，如果没有该方法，则调用valueOf()方法，都没有则报错<br>对象到数字的的转换：<br>先调用valueOf()方法，如果没有该方法，则调用toString()方法，都没有则报错。<br>在对象的+，==运算中，大部分的对象都是转换到数字，但是日期类(Date)比较特殊，它是转换到字符串。<br>其他的运算都是转换到数字（包括Date类型）。<br>当声明了一个全局变量时，实际上是定义了全局对象的一个属性。当使用 了var声明一个变量时，<br>创建的这个属性是不可配置的，也就是说这个变量无法通过delete运算符删除。<br>如果没有使用严格模式并给一个未声明的变量赋值的话，javascript会自动创建一个全局变量。<br>以这种方式创建的变量是可以删除的。不过对于局部变量则没有这个限制。</p>
+<p>第四章表达式和运算符<br>！=和！==：这两个运算符，是==和===的相反。首先需要求==或者===的结果，再取反<br>eval()是函数，但是已经作为javascript内的关键字（运算符）了。<br>eval的字符串执行时的上下文环境和调用函数的上下文环境是一样的，这不能使其作为函数的一部分来运行。<br>eval()具有更改局部变量的能力。<br>eval当被重定义为全局的，那么在改变相同变量时，调用的是全局的变量，相反如果被直接使用，则在局部就被当成局部，在全局就当成全局。<br>严格模式下，不允许用一个别名覆盖eval()函数。<br>对于所有内置可执行对象，typeof运算符一律返回“function<br>delete实际上并没有清楚删除的对象，比如在删除数组中一个元素时，其数组长度并没有变。<br>删除不存在的属性，返回true<br>没有使用var定义的全局变量可以删除<br>void 是一元运算符，使用void会忽略计算结果并返回undefined</p>
+<p>第五章语句<br>在语句中声明的变量并不是语句块私有的。<br>with语句用于临时扩展作用域。不过在严格模式在是禁用with的。不推荐使用with<br>use strict是一条指令，声明是按照严格模式<br> 严格模式下有以下：<br>        1.严格模式下禁止使用with语句<br>        2.在严格模式下，所有的变量都要先声明。<br>        3.在严格模式下，调用的函数（不是方法）中的一个this值是undefined。非严格下是全局对象。<br>         单独定义的function是函数，在对象里定义的function是方法。函数可以单独通过使用函数名调用，而方法需要实例对象后，通过对象才能调用。<br>        函数既可以当做普通函数调用又可以当做构造函数创建新对象。</p>
+<p>第六章对象<br>对象时javascript的一个基本数据类型<br>数组，函数，日期和正则表达式都是内置对象<br>可以通过对象直接量，关键字new和object.create()函数来创建对象。（object.create属于ECMAscript 5）<br>所以通过对象直接量创建的对象都具有同一个原型对象，并可以通过javascript代码object.prototype获取对原型对象的引用。<br>通过new和构造函数调用创建的对象的原型就是构造函数的prototype属性的值。</p>
+<p>没有原型的对象为数不多，Object.prototype就是其中之一。也就是说Object.prototype是对象，而没有单独使用Object。Object只是一个类名。</p>
+<p>object.create()传入的如果是null，则表示创建一个没有原型的新对象，但通过这种方式创建的对象不会继承任何东西，甚至不包括基础方法，比如toSring()。<br>如果想创建一个普通的空对象，需要传入Object.prototype<br>var o=Object.create(Object.prototype)等同于{}和new Object()一样。<br>一个对象的prototype属性代表它继承的对象。<br>比如有如下代码：<br>        function f(){ };<br>        f.prototype=p//假设p是一个对象<br>        var a=new f();<br>        则a是一个对象，其继承了p<br>调用对象的属性可以使用点(.)和方括号（[]）<br>子类的属性只会覆盖父类的，不会修改</p>
+<p>propertyIsEnumber()只有检测到是自由属性且这个属性是可枚举性为true时它才会返回true。<br>Object.getOwnPropertyDescriptor()可以获取某个对象特定的属性描述：<br>                      Object.getOwnPropertyDescriptor({x:1}，“x‘);将返回{value:1,writable:true,enumerable:true,configurable:true}<br>相反使用Object.defineProperty()可以设置对象属性的特性。<br>如果数据属性是不可配置的，则不能修改它的可写性从false修改为true，但是可以从true修改为false。<br>对象的不可扩展性只影响自身对象，如果对它的原型添加属性，该对象仍然会继承新属性</p>
+<p>对于对象的set和get属性，使用如下：<br>var a={<br>   get: count(){//函数体}，<br>   set :count(m){//函数体}<br>}<br>var b=a.count;<br>a.count=100;</p>
+<p>第七章数组<br>在javascript中，由于简单数组属于对象，因此自身有sort方法等，然而在java中简单数组属于基本类型，因此自身没有所谓的sort等方法，不过可以使用Arrays.sort()方法。</p>
+<p>forEach方法从头至尾遍历数组，为每个元素调用指定的函数。forEach使用三个参数调用该函数：数组元素，元素的索引，数组本身<br>var data=[1,2,3,4,5];<br>var sum=0;<br>data.forEach(function(value){sum+=value});<br>sum//==&gt;15<br>data.forEach(function(v,i,a){a[i]=v+1});<br>data//=&gt;[2,3,4,5,6]<br>也就是说传入的函数如果是只有一个参数，则只使用数组元素，同理如果是2,3个参数，则使用数组元素，元素索引以及数组本身。<br>这里就隐含了，将会调用函数lenth次。<br>使用map函数时，传递的函数应该有返回值，并且返回的数组是新数组，并不改变原数组。同forEach一样根据传入函数的参数个数对应传入相应的值。<br>filter是过滤函数，通过传入的函数判断数组元素是否满足，不满足的将删除掉。并且会跳过稀疏数组中缺少的元素。同forEach一样根据传入函数的参数个数对应传入相应的值。<br>reduce可以根据传入的函数进行组合成一个值。传入的函数必须是两个参数，代码如下：<br>var a=[1,2,3,4,5];<br>var sum=a.reduce(function(x,y){return x+y;},0)//数组求和<br>var product=a.reduce(function(x,y){return x*y},1);//数组求积<br>var max=a.reduce(function(x,y){return (x&gt;y)?x:y});//求最大值<br>这里先分析第一个：首先reduce会将x为0，y为数组的第一个值。接下来就是通过传入的函数求得值，求得的这个值会赋给x，y为数组的第二个值。就这样不断的循环直到结束。最后返回结果<br>第二个同第一个，第三个没有后面的参数，此时初始时x为数组的第一个，y为第二个值。接下来同第一个，最后返回结果。</p>
+<p>第八章函数<br>函数即对象<br>可以嵌套在其他函数中定义。<br>有四种方式来调用函数：<br>1.作为函数<br>2.作为方法<br>3.作为构造函数<br>4.通过他们的call()和apply()方法简介调用。</p>
+<p>没有形参的构造函数可以省略括号<br>函数中的arguments属性可以判断参数的个数。</p>
+<p>因为函数可以作为对象，因此函数可以有自己的属性。</p>
+<p>函数可以作为命名空间函数，可以将变量变成局部的。常用的写法是：<br>（function(){<br>             //模块代码<br>        }( )）；//结束函数定义并立即调用。<br>函数的执行用到了作用域链，这个作用域链是函数定义的时候创建的。嵌套的函数定义，使用嵌套函数的局部变量，不管什么时候调用嵌套的函数，这种绑定的效果仍然有效。如下代码：<br>var s=”global s”;<br>function checks(){<br>       var s=”locals”;<br>       function f(){return s;}<br>       return f;<br>}<br>checks()();    //返回值仍然是”locals”<br>等同于如下代码：<br>var s=”globals”;<br>function checks(){<br>      var s=”locals”;<br>       function f(){return s;}<br>       return f();<br>}<br>checks();//返回locals<br>嵌套的函数的不会将作用域内的私有成员复制一份，也不会对所有的变量生成静态快照。</p>
+<p>bind方法，传入一个对象作为参数，这个方法还返回一个新的函数。调用新的函数将会把原始的函数当做宿主对象的方法来调用。传入新函数的任何实参将传入原始函数。代码如下：<br>                    function f(y){return this.x+y;}//待绑定的函数<br>                    var o={x:1};<br>                    var g=f.bind(o);//可以通过调用g(x)来调用o.f(x)<br>                    g(2)//===&gt;3<br>例子2<br>var sum=function(x,y){return x+y};<br>var succ=sum.bind(null,1);<br>succ(2)//==&gt;3    x绑定到1，并传入2作为实参y<br>例子3<br>function f(y,z){return this.x+y+z};<br>var g=f.bind({x:1},2);<br>g(3)//==&gt;6   this.x绑定到1，y绑定到2，z绑定到3</p>
+<p>使用Function构造的函数不使用词法作用域，相反函数体代码的编译总是会在顶层函数（也就是全局作用域）执行。<br>定义的函数没有参数，在调用的时候也可以传入参数。</p>
+<p>高阶函数，就是函数调用函数，返回新函数。<br>这里需要讲讲call和apply函数，call的调用时这样的call(a,b),a是要调用函数的母对象,b是一个值，是用来作为原函数的参数，也就是说调用call方法的函数的参数只能是1个。相反调用apply的函数的参数时多个的。有下面包括call和apply的高阶函数例子：<br>//改高阶函数实现了f(g())的复合函数<br>             function compose(f,g){<br>                           return function(){<br>                                      //需要给f()传入一个参数，所以调用f()的call()方法，返回值为结果<br>                                      //需要给g()传入多个参数，所以调用g()的apply()方法,返回值作为f的参数<br>                                       return f.call(this,g.apply(this,arguments));<br>                                    //this代表调用call或者apply函数本身<br>                          }；<br>             }<br>var square=function(x){return x*x;};<br>var sum=  function(x,y){return x+y;};<br>var squareofsum=compose(square,sum);<br>suqareofsum(2,3);//==&gt;25<br>上面的例子还隐含了，定义的函数可以不显示参数，调用的时候可以传入参数，并且都保存在arguments中。<br>arguments不能作为普通的数组使用，即不能有reduce等方法<br>函数在定义它的作用域中执行，而不是在调用它的作用域中执行。</p>
+<p>第九章 类和模块<br>定义构造函数既是定义类，并且类名首字母要大写，而普通的函数和方法都是首字母小写。<br>原型对象是类的唯一标识，：当且仅当两个对象继承自同一个原型对象时，他们才是属于同一个类的实例。而初始化对象的状态的构造函数则不能作为类的标识。</p>
+<p>任何javascript函数都可以用作构造函数。并且调用构造函数是需要用到一个prototype属性。因此每个函数（Function.bind()返回的函数除外）都自动拥有一个prototypes属性，这个属性值是个对象，这个对象包含唯一一个不可枚举属性constructor，该属性值是一个函数对象。<br>对于任意的函数有  f===f.prototype.constructor</p>
+<p>instanceof继承可以不是直接继承<br>o继承自c.prototype，则表达式o instanceof c值为true，其实这也正是insanceof判断是否存在继承关系的方法。</p>
+<p>组合优于继承</p>
+<p>通过var声明的变量在函数内都是可用的，而通过let声明的变量则只属于就近的花括号括起来的语句块。</p>
+<p>数组推到<br>[表达式 for(变量 in 函数) if(条件)]<br>比如：i=[x*x for(x in range(0,10)) if(x%2===0]</p>
+<p>java和c中使用{}初始化数组，而javascript将[]为初始化数组，因为javascript的{}表达的是类型直接量。</p>
+<p>window表示web浏览器的一个窗体</p>
+<p>Window表示web浏览器的一个窗体，用window来引用它。该对象定义了一些属性，比如指代Location对象的location属性，Location对象指定当前显示在窗口中的URL，并允许脚本往窗口里载入新的URL。Window对象是全局的，处于作用域链的顶部，他的属性和方法也是全局的。Window对象有一个引用自身的属性。叫做window<br>setTimeOut()方法可以注册函数，在给定的一段时间之后触发一个回调。<br>Window对象最重要的一个属性是document,他引用Document对象。<br>每个Element对象都有style和className属性。<br>Window对象的onload处理程序是最重要的事件处理程序之一。<br>事件函数的注册并没有调用函数，只是把函数本身赋值给这些属性。</p>
+
+      
+    </div>
+    
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2015/09/20/java_socket/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption"><</strong>
+      <div class="article-nav-title">
+        
+          java socket总结
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2015/09/20/JNI/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">JNI</div>
+      <strong class="article-nav-caption">></strong>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+<div class="share">
+	<!-- JiaThis Button BEGIN -->
+	<div class="jiathis_style">
+		<span class="jiathis_txt">分享到：</span>
+		<a class="jiathis_button_tsina"></a>
+		<a class="jiathis_button_cqq"></a>
+		<a class="jiathis_button_douban"></a>
+		<a class="jiathis_button_weixin"></a>
+		<a class="jiathis_button_tumblr"></a>
+		<a href="http://www.jiathis.com/share" class="jiathis jiathis_txt jtico jtico_jiathis" target="_blank"></a>
+	</div>
+	<script type="text/javascript" src="http://v3.jiathis.com/code/jia.js?uid=1405949716054953" charset="utf-8"></script>
+	<!-- JiaThis Button END -->
+</div>
+
+
+
+<div class="duoshuo">
+	<!-- 多说评论框 start -->
+	<div class="ds-thread" data-thread-key="javascript权威指南" data-title="javascript权威指南" data-url="http://huangby.github.io/2015/09/20/javascript权威指南/"></div>
+	<!-- 多说评论框 end -->
+	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+	<script type="text/javascript">
+	var duoshuoQuery = {short_name:"true"};
+	(function() {
+		var ds = document.createElement('script');
+		ds.type = 'text/javascript';ds.async = true;
+		ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+		ds.charset = 'UTF-8';
+		(document.getElementsByTagName('head')[0] 
+		 || document.getElementsByTagName('body')[0]).appendChild(ds);
+	})();
+	</script>
+	<!-- 多说公共JS代码 end -->
+</div>
+
+
+
+
+</div>
+      <footer id="footer">
+  <div class="outer">
+    <div id="footer-info">
+    	<div class="footer-left">
+    		&copy; 2015 wizard
+    	</div>
+      	<div class="footer-right">
+      		<a href="http://hexo.io/" target="_blank">Hexo</a>  Theme <a href="https://github.com/litten/hexo-theme-yilia" target="_blank">Yilia</a> by Litten
+      	</div>
+    </div>
+  </div>
+</footer>
+    </div>
+    
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css" type="text/css">
+
+
+<script>
+	var yiliaConfig = {
+		fancybox: true,
+		mathjax: true,
+		animate: true,
+		isHome: false,
+		isPost: true,
+		isArchive: false,
+		isTag: false,
+		isCategory: false,
+		open_in_new: false
+	}
+</script>
+<script src="http://7.url.cn/edu/jslib/comb/require-2.1.6,jquery-1.9.1.min.js" type="text/javascript"></script>
+<script src="/js/main.js" type="text/javascript"></script>
+
+
+
+
+
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+        processEscapes: true,
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+    }
+});
+
+MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i=0; i < all.length; i += 1) {
+        all[i].SourceElement().parentNode.className += ' has-jax';                 
+    }       
+});
+</script>
+
+<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
+
+  </div>
+</body>
+</html>

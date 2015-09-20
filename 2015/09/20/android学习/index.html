@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>android学习 | wizard&#39;s blog</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="1、onCreate    在onCreate(…)方法里，必须先调用超类的实现方法，然后再调用其他方法，这一点很关键。而在其他方法中，是否首先调用超类方法就不那么重要了。2、屏幕旋转
+旋转设备时，需要在res/下新建layout-land文件夹，在改文件夹里面新建Activity.xml布局文件。当旋转时，系统会自动调用该布局文件。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="android学习">
+<meta property="og:url" content="http://huangby.github.io/2015/09/20/android学习/index.html">
+<meta property="og:site_name" content="wizard's blog">
+<meta property="og:description" content="1、onCreate    在onCreate(…)方法里，必须先调用超类的实现方法，然后再调用其他方法，这一点很关键。而在其他方法中，是否首先调用超类方法就不那么重要了。2、屏幕旋转
+旋转设备时，需要在res/下新建layout-land文件夹，在改文件夹里面新建Activity.xml布局文件。当旋转时，系统会自动调用该布局文件。">
+<meta property="og:updated_time" content="2015-09-20T08:50:03.635Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="android学习">
+<meta name="twitter:description" content="1、onCreate    在onCreate(…)方法里，必须先调用超类的实现方法，然后再调用其他方法，这一点很关键。而在其他方法中，是否首先调用超类方法就不那么重要了。2、屏幕旋转
+旋转设备时，需要在res/下新建layout-land文件夹，在改文件夹里面新建Activity.xml布局文件。当旋转时，系统会自动调用该布局文件。">
+  
+    <link rel="alternative" href="/atom.xml" title="wizard&#39;s blog" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  <link rel="stylesheet" href="/css/style.css" type="text/css">
+</head>
+<body>
+  <div id="container">
+    <div class="left-col">
+    <div class="overlay"></div>
+<div class="intrude-less">
+	<header id="header" class="inner">
+		<a href="/" class="profilepic">
+			
+			<img lazy-src="/favicon.jpg" class="js-avatar">
+			
+		</a>
+
+		<hgroup>
+		  <h1 class="header-author"><a href="/">wizard</a></h1>
+		</hgroup>
+
+		
+		<p class="header-subtitle">我的这片土地，不卖</p>
+		
+
+		
+			<div class="switch-btn">
+				<div class="icon">
+					<div class="icon-ctn">
+						<div class="icon-wrap icon-house" data-idx="0">
+							<div class="birdhouse"></div>
+							<div class="birdhouse_holes"></div>
+						</div>
+						<div class="icon-wrap icon-ribbon hide" data-idx="1">
+							<div class="ribbon"></div>
+						</div>
+						
+						<div class="icon-wrap icon-link hide" data-idx="2">
+							<div class="loopback_l"></div>
+							<div class="loopback_r"></div>
+						</div>
+						
+						
+						<div class="icon-wrap icon-me hide" data-idx="3">
+							<div class="user"></div>
+							<div class="shoulder"></div>
+						</div>
+						
+					</div>
+					
+				</div>
+				<div class="tips-box hide">
+					<div class="tips-arrow"></div>
+					<ul class="tips-inner">
+						<li>菜单</li>
+						<li>标签</li>
+						
+						<li>友情链接</li>
+						
+						
+						<li>关于我</li>
+						
+					</ul>
+				</div>
+			</div>
+		
+
+		<div class="switch-area">
+			<div class="switch-wrap">
+				<section class="switch-part switch-part1">
+					<nav class="header-menu">
+						<ul>
+						
+							<li><a href="/archives">所有文章</a></li>
+				        
+							<li><a href="/tags/JAVA">JAVA</a></li>
+				        
+							<li><a href="/tags/Python">Python</a></li>
+				        
+							<li><a href="/tags/Linux">Linux</a></li>
+				        
+							<li><a href="/tags/android">android</a></li>
+				        
+							<li><a href="/tags/mongodb">mongodb</a></li>
+				        
+							<li><a href="/tags/javascript">javascript</a></li>
+				        
+						</ul>
+					</nav>
+					<nav class="header-nav">
+						<div class="social">
+							
+						</div>
+					</nav>
+				</section>
+				
+				
+				<section class="switch-part switch-part2">
+					<div class="widget tagcloud" id="js-tagcloud">
+						<a href="/tags/JAVA/" style="font-size: 20px;">JAVA</a> <a href="/tags/Linux/" style="font-size: 10px;">Linux</a> <a href="/tags/Python/" style="font-size: 10px;">Python</a> <a href="/tags/android/" style="font-size: 15px;">android</a> <a href="/tags/javascript/" style="font-size: 10px;">javascript</a> <a href="/tags/java编程思想/" style="font-size: 10px;">java编程思想</a> <a href="/tags/mongodb/" style="font-size: 10px;">mongodb</a> <a href="/tags/正则表达式/" style="font-size: 10px;">正则表达式</a> <a href="/tags/源码分析/" style="font-size: 10px;">源码分析</a> <a href="/tags/算法/" style="font-size: 10px;">算法</a>
+					</div>
+				</section>
+				
+				
+				
+				<section class="switch-part switch-part3">
+					<div id="js-friends">
+					
+			          <a target="_blank" class="main-nav-link switch-friends-link" href="http://localhost:4000/">奥巴马的博客</a>
+			        
+			          <a target="_blank" class="main-nav-link switch-friends-link" href="http://localhost:4000/">卡卡的美丽传说</a>
+			        
+			          <a target="_blank" class="main-nav-link switch-friends-link" href="http://localhost:4000/">本泽马的博客</a>
+			        
+			          <a target="_blank" class="main-nav-link switch-friends-link" href="http://localhost:4000/">吉格斯的博客</a>
+			        
+			          <a target="_blank" class="main-nav-link switch-friends-link" href="http://localhost:4000/">习大大大不同</a>
+			        
+			          <a target="_blank" class="main-nav-link switch-friends-link" href="http://localhost:4000/">托蒂的博客</a>
+			        
+			        </div>
+				</section>
+				
+
+				
+				
+				<section class="switch-part switch-part4">
+				
+					<div id="js-aboutme">我是一名搬运工，每天勤勤恳恳在耕作.....</div>
+				</section>
+				
+			</div>
+		</div>
+	</header>				
+</div>
+    </div>
+    <div class="mid-col">
+      <nav id="mobile-nav">
+  	<div class="overlay">
+  		<div class="slider-trigger"></div>
+  		<h1 class="header-author js-mobile-header hide">wizard</h1>
+  	</div>
+	<div class="intrude-less">
+		<header id="header" class="inner">
+			<div class="profilepic">
+				<img lazy-src="/favicon.jpg" class="js-avatar">
+			</div>
+			<hgroup>
+			  <h1 class="header-author">wizard</h1>
+			</hgroup>
+			
+			<p class="header-subtitle">我的这片土地，不卖</p>
+			
+			<nav class="header-menu">
+				<ul>
+				
+					<li><a href="/archives">所有文章</a></li>
+		        
+					<li><a href="/tags/JAVA">JAVA</a></li>
+		        
+					<li><a href="/tags/Python">Python</a></li>
+		        
+					<li><a href="/tags/Linux">Linux</a></li>
+		        
+					<li><a href="/tags/android">android</a></li>
+		        
+					<li><a href="/tags/mongodb">mongodb</a></li>
+		        
+					<li><a href="/tags/javascript">javascript</a></li>
+		        
+		        <div class="clearfix"></div>
+				</ul>
+			</nav>
+			<nav class="header-nav">
+				<div class="social">
+					
+				</div>
+			</nav>
+		</header>				
+	</div>
+</nav>
+      <div class="body-wrap"><article id="post-android学习" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2015/09/20/android学习/" class="article-date">
+  	<time datetime="2015-09-19T16:00:00.000Z" itemprop="datePublished">2015-09-20</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      android学习
+    </h1>
+  
+
+      </header>
+      
+      <div class="article-info article-info-post">
+        
+	<div class="article-tag tagcloud">
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/android/">android</a></li></ul>
+	</div>
+
+        
+	<div class="article-category tagcloud">
+	<a class="article-category-link" href="/categories/android/">android</a>
+	</div>
+
+
+        <div class="clearfix"></div>
+      </div>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>1、onCreate<br>    在onCreate(…)方法里，必须先调用超类的实现方法，然后再调用其他方法，这一点很关键。而在其他方法中，是否首先调用超类方法就不那么重要了。<br>2、屏幕旋转</p>
+<p>旋转设备时，需要在res/下新建layout-land文件夹，在改文件夹里面新建Activity.xml布局文件。当旋转时，系统会自动调用该布局文件。<br><a id="more"></a><br>只要在应用运行中设备配置发生了改变，Android就会销毁当前activity，然后再新建一个activity。另外，在应用运行中，虽然也会发生可用键盘或语言的改变，但设备屏幕方向的改变是最为常见的情况。<br>3、Activity数据缓存</p>
+<p>onSaveInstanceState(Bundle saveInstanceState)方法可以保存同一个activity的数据（比如当该activity被销毁，但是又被实例化，那么可以    获得销毁前的数据），系统通过调用onCreate(Bundle saveInstanceState)，此时该Bundle就可以获取之前的数据。<br>Bundle数据是以键值对的方式储存。（这里与Map的区别是什么？？？）<br>我们在Bundle中存储和恢复的数据类型只能是基本数据类型（primitive type）以及可以实现Serializable接口的对象。创建自己的定制类时，如需在onSaveInstanceState(…)方法中保存类对象，记得实现Serializable接口  。<br>activity只有在暂停或停止状态下才可能会被销毁。此时，会调用onSaveInstanceState(…)方法。  也就是说该方法是在Activity销毁之前调用。<br>那么暂存的activity记录到底可以保留多久？前面说过，用户按了后退键后，系统会彻底销毁当前的activity。此时，暂存的activity记录同时被清除。此外，系统重启或长时间不使用activity时，暂存的activity记录通常也会被清除。<br>4.页面跳转 activity调用startActivity(…)方法时，调用请求实际发给了操作系统。<br> 准确地说，该方法调用请求是发送给操作系统的ActivityManager。</p>
+<p>ActivityManager如何知道该启动哪一个Activity呢？答案就在于传入startActivity(…)方法的Intent参数。<br>intent对象是component用来与操作系统通信的一种媒介工具  。<br>启动activity以前，ActivityManager会检查确认指定的Class是否已在配置文件中声明。<br>如已完成声明，则启动activity，应用正常运行。反之，则抛出ActivityNotFoundException异<br>常。这就是我们必须在manifest配置文件中声明应用全部activity的原因所在。<br>Intent的extra信息可以是任意数据，extra也同样是一种key-value结构</p>
+<p>若需要从子activity获取返回信息时，可调用以下Activity方法  startActivityForResult(Intent intent,int code)</p>
+<p>startActivityForResult&lt;————————–&gt;setResult(int resultcode,Intent data)<br>通常来说，参数resultcode可以是以下两个预定义常量中的任何一个：<br> Activity.RESULT_OK；<br> Activity.RESULT_CANCELED。<br>（如需自己定义结果代码，还可使用另一个常量：RESULT_FIRST_USER）<br>在没有调用setResult(…)方法的情况下，如果用户单击了后退按钮，父activity则会收到Activity.RESULT_CANCELED的结果代码。<br>调用setResult(int, Intent)方法将结果代码以及intent打包。<br>在用户单击后退键回到QuizActivity时，ActivityManager调用父activity的以下方法：<br>proetcted void onActivityResult(int requescode,int resultcode,Intent data);<br>该方法的参数来自于父activity的原始请求代码以及传入SetResult(…)方法的结果代码和intent。<br>最后覆盖父activity的onActivityResult(int, int, Intent)方法来处理返回结果<br>上述讲到的返回是使用返回键，并不是自己设置返回按钮。<br>5.activity 的使用与管理</p>
+<p>首先，在桌面启动器中点击GeoQuiz应用时，操作系统并没有启动应用，而只是启动了应用中的一个activity。<br>确切地说，它启动了应用的launcher activity。在GeoQuiz应用中，QuizActivity就是它的launcher<br> activity。使用应用向导创建GeoQuiz应用以及QuizActivity时，QuizActivity默认被设置为launcheractivity。<br> 配置文件中，QuizActivity声明的intent-filter元素节点下  可看到QuizActivity被指定为launcher activity<br>&lt;intent-filter&gt;<br>    &lt;action android:name=”android.intent.action.MAINA”/&gt;<br>    &lt;category android:name=”android.intent.category.LAUNCHER”/&gt;<br>&lt;/intent-filter&gt;<br>在Activity中调用Activity.finish()方法同样可以将Activity从栈里弹出  .<br>ActivityManager维护着一个非特定应用独享的回退栈。所有应用的activity都共享该回退栈。这也是将ActivityManager设计成操作系统级的activity管理器来负责启动应用activity的原因之一。不局限于单个应用，回退栈作为一个整体共享给操作系统及设备使用  .<br>6 Android Lint</p>
+<p>选择Android Tools → Run Lint:Check for Common Errors菜单项  ,可以解决java不能解决的问题，当有错误的时候，Lint会阻止编译。<br>Build.VERSION.SDK_INT常量代表了Android设备的版本号<br>禁止Lint提示兼容性问题 ：<br>@TargetApi表示注解api级别<br>7UI fragment与fragment管理器</p>
+<p>采用fragment而不是activity进行应用的UI管理，可绕开Android系统activity规则的限制  。<br>fragment生命周期如下：</p>
+<p>fragment生命周期与activity生命周期的一个关键区别就在于，fragment的生命周期方法是由 托管activity而不是操作系统调用的。操作系统无从知晓activity用来管理视图的fragment。fragment的使用是activity自己内部的事情。</p>
+<p>在activity中托管一个UI fragment，有如下两种方式：<br> 添加fragment到activity布局中；<br> 在activity代码中添加fragment。 </p>
+<p>创建一个UI fragment的步骤与创建一个activity的步骤相同，具体步骤如下所示：<br> 通过定义布局文件中的组件，组装界面；<br> 创建fragment类并设置其视图为定义的布局；<br> 通过代码的方式，连接布局文件中生成的组件。 </p>
+<p>Fragment.onCreate(Bundle)是公共方法，而Activity.onCreate(Bundle)是保护方法<br>在Fragment.onCreate(…)方法中，并没有生成fragment的视图  ,需要使用onCreateView(…)方法。</p>
+<p>Fragment.onCreateView(…)方法中的组件引用几乎等同于Activity.onCreate(…)<br>方法的处理。唯一的区别是我们调用了fragment视图的View.findViewById(int)方法。以前使<br>用的Activity.findViewById(int)方法十分便利，能够在后台自动调用View.findView-<br>ById(int)方法。而Fragment类没有对应的便利方法，因此我们必须自己完成调用。 </p>
+<p>为fragment无法将自己的视图显示在屏幕上 ，需要使用activity进行托管 。<br>FragmentManager类负责管理fragment并将它们的视图添加到activity的视图层级结构中。<br>FragmentManager类具体管理的是：<br> fragment队列；<br> fragment事务的回退栈。 </p>
+<p>FragmentManager.beginTransaction()方法创建并返回FragmentTransaction实例<br>托管activity的onCreate(…)方法执行后，onActivityCreated(…)方法也会被调用。因<br>为我们正在向CrimeActivity.onCreate(…)方法中添加CrimeFragment，所以fragment被添<br>加后，该方法会被调用。<br>处于运行状态的activity中添加fragment时，以下fragment生命周期方法会被依次调用：<br>onAttach(Activity)、onCreate(Bundle)、 onCreateView(…)、onActivityCreated(Bundle)、<br>onStart()，以及onResume()方法  .<br>在Activity.onCreate(…)方法中添加fragment，那么onActivityCreated(…)方法是在Activity.onStart()方法执行后被调用的，而不是紧随Activity.onCreate(…)方法之后被调用<br>8组件<br>名称不以layout<em>开头的属性作用于组件<br>名称以layout</em>开头的属性则作用于组件的父组件<br>属性android:padding告诉组件：在绘制组件自身时，要比所含内容大多少<br>android:layout_weight属性告知LinearLayout如何进行子组件的布置安排</p>
+
+      
+    </div>
+    
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2015/09/20/学习/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption"><</strong>
+      <div class="article-nav-title">
+        
+          学习(转载)
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2015/09/20/android4高级编程/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">android4高级编程</div>
+      <strong class="article-nav-caption">></strong>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+<div class="share">
+	<!-- JiaThis Button BEGIN -->
+	<div class="jiathis_style">
+		<span class="jiathis_txt">分享到：</span>
+		<a class="jiathis_button_tsina"></a>
+		<a class="jiathis_button_cqq"></a>
+		<a class="jiathis_button_douban"></a>
+		<a class="jiathis_button_weixin"></a>
+		<a class="jiathis_button_tumblr"></a>
+		<a href="http://www.jiathis.com/share" class="jiathis jiathis_txt jtico jtico_jiathis" target="_blank"></a>
+	</div>
+	<script type="text/javascript" src="http://v3.jiathis.com/code/jia.js?uid=1405949716054953" charset="utf-8"></script>
+	<!-- JiaThis Button END -->
+</div>
+
+
+
+<div class="duoshuo">
+	<!-- 多说评论框 start -->
+	<div class="ds-thread" data-thread-key="android学习" data-title="android学习" data-url="http://huangby.github.io/2015/09/20/android学习/"></div>
+	<!-- 多说评论框 end -->
+	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+	<script type="text/javascript">
+	var duoshuoQuery = {short_name:"true"};
+	(function() {
+		var ds = document.createElement('script');
+		ds.type = 'text/javascript';ds.async = true;
+		ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+		ds.charset = 'UTF-8';
+		(document.getElementsByTagName('head')[0] 
+		 || document.getElementsByTagName('body')[0]).appendChild(ds);
+	})();
+	</script>
+	<!-- 多说公共JS代码 end -->
+</div>
+
+
+
+
+</div>
+      <footer id="footer">
+  <div class="outer">
+    <div id="footer-info">
+    	<div class="footer-left">
+    		&copy; 2015 wizard
+    	</div>
+      	<div class="footer-right">
+      		<a href="http://hexo.io/" target="_blank">Hexo</a>  Theme <a href="https://github.com/litten/hexo-theme-yilia" target="_blank">Yilia</a> by Litten
+      	</div>
+    </div>
+  </div>
+</footer>
+    </div>
+    
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css" type="text/css">
+
+
+<script>
+	var yiliaConfig = {
+		fancybox: true,
+		mathjax: true,
+		animate: true,
+		isHome: false,
+		isPost: true,
+		isArchive: false,
+		isTag: false,
+		isCategory: false,
+		open_in_new: false
+	}
+</script>
+<script src="http://7.url.cn/edu/jslib/comb/require-2.1.6,jquery-1.9.1.min.js" type="text/javascript"></script>
+<script src="/js/main.js" type="text/javascript"></script>
+
+
+
+
+
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+        processEscapes: true,
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+    }
+});
+
+MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i=0; i < all.length; i += 1) {
+        all[i].SourceElement().parentNode.className += ' has-jax';                 
+    }       
+});
+</script>
+
+<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
+
+  </div>
+</body>
+</html>

@@ -3,18 +3,18 @@
 <head>
   <meta charset="utf-8">
   
-  <title>异形数 | wizard&#39;s blog</title>
+  <title>路线(转) | wizard&#39;s blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="在一个长度为n的整形数组a里，除了三个数字只出现一次外，其他的数字都出现了2次。请写程序输出任意一个只出现一次的数字，程序时间和空间复杂度越小越好。例如： a = {1,3,7,9,5,9,4,3,6,1,7}，输出4或5或6">
+  <meta name="description" content="一、 基础篇         需要掌握的技能如下：               1、熟练掌握基本控件以及容器控件的使用 ；                         常用的基本控件有：Button 、TextView、EditText、ListView等                         常用的容器控件有：FrameLayout、LinearLayout、RelativeLay">
 <meta property="og:type" content="article">
-<meta property="og:title" content="异形数">
-<meta property="og:url" content="http://huangby.github.io/2015/08/22/异形数/index.html">
+<meta property="og:title" content="路线(转)">
+<meta property="og:url" content="http://huangby.github.io/2015/09/20/路线/index.html">
 <meta property="og:site_name" content="wizard's blog">
-<meta property="og:description" content="在一个长度为n的整形数组a里，除了三个数字只出现一次外，其他的数字都出现了2次。请写程序输出任意一个只出现一次的数字，程序时间和空间复杂度越小越好。例如： a = {1,3,7,9,5,9,4,3,6,1,7}，输出4或5或6">
-<meta property="og:updated_time" content="2015-09-20T08:04:27.768Z">
+<meta property="og:description" content="一、 基础篇         需要掌握的技能如下：               1、熟练掌握基本控件以及容器控件的使用 ；                         常用的基本控件有：Button 、TextView、EditText、ListView等                         常用的容器控件有：FrameLayout、LinearLayout、RelativeLay">
+<meta property="og:updated_time" content="2015-09-20T09:19:52.220Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="异形数">
-<meta name="twitter:description" content="在一个长度为n的整形数组a里，除了三个数字只出现一次外，其他的数字都出现了2次。请写程序输出任意一个只出现一次的数字，程序时间和空间复杂度越小越好。例如： a = {1,3,7,9,5,9,4,3,6,1,7}，输出4或5或6">
+<meta name="twitter:title" content="路线(转)">
+<meta name="twitter:description" content="一、 基础篇         需要掌握的技能如下：               1、熟练掌握基本控件以及容器控件的使用 ；                         常用的基本控件有：Button 、TextView、EditText、ListView等                         常用的容器控件有：FrameLayout、LinearLayout、RelativeLay">
   
     <link rel="alternative" href="/atom.xml" title="wizard&#39;s blog" type="application/atom+xml">
   
@@ -199,11 +199,11 @@
 		</header>				
 	</div>
 </nav>
-      <div class="body-wrap"><article id="post-异形数" class="article article-type-post" itemscope itemprop="blogPost">
+      <div class="body-wrap"><article id="post-路线" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a href="/2015/08/22/异形数/" class="article-date">
-  	<time datetime="2015-08-21T16:00:00.000Z" itemprop="datePublished">2015-08-22</time>
+      <a href="/2015/09/20/路线/" class="article-date">
+  	<time datetime="2015-09-19T16:00:00.000Z" itemprop="datePublished">2015-09-20</time>
 </a>
     </div>
   
@@ -216,7 +216,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      异形数
+      路线(转)
     </h1>
   
 
@@ -225,12 +225,12 @@
       <div class="article-info article-info-post">
         
 	<div class="article-tag tagcloud">
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/算法/">算法</a></li></ul>
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/android/">android</a></li></ul>
 	</div>
 
         
 	<div class="article-category tagcloud">
-	<a class="article-category-link" href="/categories/算法/">算法</a>
+	<a class="article-category-link" href="/categories/android/">android</a>
 	</div>
 
 
@@ -240,7 +240,48 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>在一个长度为n的整形数组a里，除了三个数字只出现一次外，其他的数字都出现了2次。请写程序输出任意一个只出现一次的数字，程序时间和空间复杂度越小越好。<br>例如： a = {1,3,7,9,5,9,4,3,6,1,7}，输出4或5或6<br><a id="more"></a><br>算法流程：<br>(1). f(x) = x&amp;(-x)   —–&gt;该函数可以得出x从右边开始出现1的位置，比如 f(0x1100) = 0x0100<br>(2).  x = a^b^c<br>(3).  flag = f(x^a)^f(x^b)^f(x^c) 结果必有一位是1，因为flag不可能为0，因此flag在某一位上一定为1<br>       证明： f(x^a),f(x^b),f(x^c)分别表示x^a, x^b, x^c的右边第一个1的位置，并且<br>                 x^a = b^c, x^b=a^c,x^c=a^b<br>                 假设flag的值为0，那么f(x^a),f(x^b),f(x^c)都为0，即x^a, x^b, x^c为0，那么a=b=c矛盾<br>(4). f(x^a)^f(x^b)^f(x^c)的第m位为1，则f(x^a), f(x^b), f(x^c)必有1个或者3个第m位为1，因为只能是  0^0^1=1或者1^1^1=1<br>(5). x^a, x^b, x^c只有一个第m位为1<br>      证明(5) 由于(4)得出，f(x^a), f(x^b), f(x^c)必有1个或者3个第m位为1，(结论1)因此x^a, x^b, x^c的第m位最多是1个为1或者三个为1。因为f(x)表示x的右边第一个为1的位置，那么f(x)值的第m位为1(f(x)中只能有一个1)，也就表示x的第m位也为1.因此f(x)为1的位置和x为1的位置是对应的。假设x^a, x^b, x^c有三个在m位上为1。<br>      1&gt; 如果 x(m) =1 ———&gt;x(m)表示x的m位，下同。<br>           那么必有：a(m) = 0,b(m)=0, c(m)=0.<br>                 并且x(m) = a(m)^b(m)^c(m) = 0 矛盾。<br>      2&gt;如果 x(m) = 0:<br>           那么必有：a(m) = 1,b(m)= 1,c(m) = 1<br>                 并且x(m) = a(m)^b(m)^c(m) = 1 矛盾。<br>      综上所述，x^a, x^b, x^c有三个在m位上为1的假设是不成立的。因此只能有一个。<br>(6)flag = f (f(x^a)^f(x^b)^f(x^c))<br>(7)如果f(x^i) = flag的数都在一组里面，并且包含了所求的值，最后对这组值求异或即得结果。<br>代码如下：<br>int f(int x)<br>{<br>    return x&amp;(-x);<br>}<br>int find(int [] datas)<br>{<br>     int len=datas.length;<br>     int x = 0;<br>     for(int i=0;i&lt;len;i++){<br>          x ^= datas[i];<br>     }<br>     int flag =  0;<br>     for(int i=0;i&lt;len;i++){<br>          flag ^= f(x^datas[i]);<br>     }<br>     int b=0;<br>     for(int i=0;i&lt;len;i++){<br>         if(f(x^datas[i]) == f(flag))<br>               b ^= datas[i];<br>     }<br>     return b;<br>}</p>
+        <p>  一、 基础篇         需要掌握的技能如下：               1、熟练掌握基本控件以及容器控件的使用 ；<br>                         常用的基本控件有：Button 、TextView、EditText、ListView等<br>                         常用的容器控件有：FrameLayout、LinearLayout、RelativeLayout等<br>               2、熟练掌握相关监听器的注册和使用：<br>                         常用监听器有： OnClickListener、OnLongClickListener、OnItemClickListener等<br>    <a id="more"></a><br>               3、掌握Log的使用以及分析方法 ；<br>               4、掌握Activity、Service的生命周期和使用方法 ；<br>               5、掌握BroadcastReceiver(广播)的接受和使用   ；<br>               6、掌握Intent以及IntentFilter的使用   ；<br>               7、基本掌握数据库方面知识，包括SQLiteDatabase以及ContentProvider的使用方法</p>
+<pre><code>     除此之外，我们必须得掌握adb <span class="keyword">shell</span> 的使用方法，常用功能有：
+                    adb pull 、  adb push 、 adb remount 指令等
+     由于<span class="keyword">shell</span>类同于Linux <span class="keyword">shell</span> ，我们还得掌握基本的Linux指令等，例如<span class="keyword">cat</span>、<span class="keyword">cd</span> 等 。
+
+知识获取渠道主要为：
+              Android SDK以及网上大牛的博客。
+  附： 关于基础知识的介绍，国内的一些书籍质量真是相当差劲，味同嚼蜡。强烈不建议在此阶段买书籍。
+
+   这时，您已经小有所成了，能够基本掌握Android开发了。这儿，我推荐一个手把手讲解Android项目的视频：
+           zhengping老师讲解的，强烈推荐。
+              视频下载地址：http:<span class="comment">//www.verycd.com/topics/2847310/</span>
+
+
+ 祝您一臂之力的当然还有Mars老师的视频了。
+
+ 实践出真知。这个阶段，你可以自己编写一些小Demo了，帮助自己在更深层次发展了。
+    PS：我通过看了Mars老师视频后，编写了一个简易的音乐播放器Demo， 感觉挺有成就感的。
+</code></pre><p>  通过前面的学习，我们可以成功进入第二个阶段了。</p>
+<p>  二、 提高篇        需要掌握的技能如下：                 1、掌握Canvas类的使用– 如何绘图<br>                 2、掌握消息通信机制—Handler相关类的使用以及原理<br>                 3、掌握Context类以及实现原理<br>                 4、掌握View树的绘制流程  。 View绘制流程很重要，掌握它就基本上掌握了Android核心之一了。<br>                         4.1、掌握触摸事件的分发流程— onInterceptTouchEvent以及onTouchEvent方法流程<br>                         4.2、掌握相关监听器的调用机制。例如OnClickListener监听时怎么调用的？<br>                         4.3、能够编写自定义View以及ViewGroup<br>                 5、理解Binder机制—-Binder机制很重要，Android的进程间通信都是靠它完成的。掌握它，才能够好的完成接下<br>                    来的学习。<br>                 6、基本掌握ActivityManagerService类的使用，主要掌握的知识点包括如下：<br>                          6.1、startActivity()流程，即启动一个Activity的流程  ;<br>                          6.2、startService()流程，即启动一个Service的流程 ;<br>                 7、基本掌握PackageManagerService类的使用，主要掌握的知识点包括如下：<br>                          7.1、开机时如何解析所有已安装应用程序的Apk包的信息<br>                          7.2、Intent以及IntentFilter的匹配规则以及解析过程<br>                 8、基本掌握View添加至窗口的过程—即WindowManagerIml 、WindowManagerService类的用法<br>   知识渠道：                      网上相关大牛的博客。 (我这一亩三分地也有点货咯。(<em>^__^</em>) )</p>
+<pre><code>                必备书籍: &lt;<span class="keyword">Android内核剖析&gt;
+</span>
+                     <span class="keyword">Android源代码一份
+</span>   PS： 您的个人电脑上一定得有份  <span class="keyword">Android源代码，否则何以笑傲江湖 </span>。  三、 进阶篇
+      <span class="number">1</span>、基本理解SystemServer类加载流程以及WatchDog的功能
+      <span class="number">2</span>、more......
+
+   我也还是个小菜鸟，更多的就不知道咯。希望以后能够完善起来。和大家共同成长。
+
+最后，我总结的一些学习知识点只是一个提纲挈领，帮助大家学习成长的点或者线。例如：我负责通讯录模块，当然得把数据
+</code></pre><p>库方面知识弄得一清二楚啊。不然，公司要我何用。因此大家在学习的时候，找出更适合自己的点。</p>
+<pre><code>有些人可能会想，工作中我用不到，学它干嘛？再次也规劝大家在工作之余，给自己充充电，多学点知识只有好的没有坏的。
+
+希望大家每天能进步一点，成长一点，接近心目中的那个天空更近一点。     
+</code></pre><p>   前面说的博客，在此推荐两个我常去的吧：</p>
+<pre><code>    <span class="number">1</span>、   应用方面，主要是魏祝林的csdn博客 ：http:<span class="comment">//blog.csdn.net/Android_Tutor 。 但他的博客主要是以代码为主，</span>
+        需要自己结合源代码揣摩 。
+    <span class="number">2</span>、   框架方面，主要是老罗的csdn博客 ： http:<span class="comment">//blog.csdn.net/Luoshengyang/ 。  但他的博客主要是以流程分析</span>
+        为主，  而对 流程 需要的前期准备知识介绍不足，初步看起来比较难以理解，因此，买本《Android内核剖析》是必须
+        的，可以参考源代码仔细领悟， 强烈推荐该书籍。
+由于网络上Android源码不太好找，特此共享下Android部分源码，主要包括框架层、中间层、以及一些App等，对上层开发
+</code></pre><p>和中间层开发还是很有益处的：</p>
 
       
     </div>
@@ -250,15 +291,20 @@
     
 <nav id="article-nav">
   
-    <a href="/2015/09/20/java的byte转十六进制/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2015/09/20/android4高级编程/" id="article-nav-newer" class="article-nav-link-wrap">
       <strong class="article-nav-caption"><</strong>
       <div class="article-nav-title">
         
-          java的byte转换成十六进制表示
+          android4高级编程
         
       </div>
     </a>
   
+  
+    <a href="/2015/09/20/HashMap源码分析/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">HashMap源码分析</div>
+      <strong class="article-nav-caption">></strong>
+    </a>
   
 </nav>
 
@@ -285,7 +331,7 @@
 
 <div class="duoshuo">
 	<!-- 多说评论框 start -->
-	<div class="ds-thread" data-thread-key="异形数" data-title="异形数" data-url="http://huangby.github.io/2015/08/22/异形数/"></div>
+	<div class="ds-thread" data-thread-key="路线" data-title="路线(转)" data-url="http://huangby.github.io/2015/09/20/路线/"></div>
 	<!-- 多说评论框 end -->
 	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
 	<script type="text/javascript">

@@ -3,18 +3,18 @@
 <head>
   <meta charset="utf-8">
   
-  <title>异形数 | wizard&#39;s blog</title>
+  <title>Effective java | wizard&#39;s blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="在一个长度为n的整形数组a里，除了三个数字只出现一次外，其他的数字都出现了2次。请写程序输出任意一个只出现一次的数字，程序时间和空间复杂度越小越好。例如： a = {1,3,7,9,5,9,4,3,6,1,7}，输出4或5或6">
+  <meta name="description" content="第一条、考虑用静态工厂代替构造器        1.静态工厂方法与构造器不同的第一大优势在于，他们有名称        2.静态工厂方法与构造器不同的第二大优势在于，不必在每次调用他们的时候都创建一个新的对象。">
 <meta property="og:type" content="article">
-<meta property="og:title" content="异形数">
-<meta property="og:url" content="http://huangby.github.io/2015/08/22/异形数/index.html">
+<meta property="og:title" content="Effective java">
+<meta property="og:url" content="http://huangby.github.io/2015/09/20/Effectivejava/index.html">
 <meta property="og:site_name" content="wizard's blog">
-<meta property="og:description" content="在一个长度为n的整形数组a里，除了三个数字只出现一次外，其他的数字都出现了2次。请写程序输出任意一个只出现一次的数字，程序时间和空间复杂度越小越好。例如： a = {1,3,7,9,5,9,4,3,6,1,7}，输出4或5或6">
-<meta property="og:updated_time" content="2015-09-20T08:04:27.768Z">
+<meta property="og:description" content="第一条、考虑用静态工厂代替构造器        1.静态工厂方法与构造器不同的第一大优势在于，他们有名称        2.静态工厂方法与构造器不同的第二大优势在于，不必在每次调用他们的时候都创建一个新的对象。">
+<meta property="og:updated_time" content="2015-09-20T08:48:41.821Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="异形数">
-<meta name="twitter:description" content="在一个长度为n的整形数组a里，除了三个数字只出现一次外，其他的数字都出现了2次。请写程序输出任意一个只出现一次的数字，程序时间和空间复杂度越小越好。例如： a = {1,3,7,9,5,9,4,3,6,1,7}，输出4或5或6">
+<meta name="twitter:title" content="Effective java">
+<meta name="twitter:description" content="第一条、考虑用静态工厂代替构造器        1.静态工厂方法与构造器不同的第一大优势在于，他们有名称        2.静态工厂方法与构造器不同的第二大优势在于，不必在每次调用他们的时候都创建一个新的对象。">
   
     <link rel="alternative" href="/atom.xml" title="wizard&#39;s blog" type="application/atom+xml">
   
@@ -199,11 +199,11 @@
 		</header>				
 	</div>
 </nav>
-      <div class="body-wrap"><article id="post-异形数" class="article article-type-post" itemscope itemprop="blogPost">
+      <div class="body-wrap"><article id="post-Effectivejava" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a href="/2015/08/22/异形数/" class="article-date">
-  	<time datetime="2015-08-21T16:00:00.000Z" itemprop="datePublished">2015-08-22</time>
+      <a href="/2015/09/20/Effectivejava/" class="article-date">
+  	<time datetime="2015-09-20T08:48:41.821Z" itemprop="datePublished">2015-09-20</time>
 </a>
     </div>
   
@@ -216,7 +216,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      异形数
+      Effective java
     </h1>
   
 
@@ -225,12 +225,12 @@
       <div class="article-info article-info-post">
         
 	<div class="article-tag tagcloud">
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/算法/">算法</a></li></ul>
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JAVA/">JAVA</a></li></ul>
 	</div>
 
         
 	<div class="article-category tagcloud">
-	<a class="article-category-link" href="/categories/算法/">算法</a>
+	<a class="article-category-link" href="/categories/JAVA/">JAVA</a>
 	</div>
 
 
@@ -240,7 +240,40 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>在一个长度为n的整形数组a里，除了三个数字只出现一次外，其他的数字都出现了2次。请写程序输出任意一个只出现一次的数字，程序时间和空间复杂度越小越好。<br>例如： a = {1,3,7,9,5,9,4,3,6,1,7}，输出4或5或6<br><a id="more"></a><br>算法流程：<br>(1). f(x) = x&amp;(-x)   —–&gt;该函数可以得出x从右边开始出现1的位置，比如 f(0x1100) = 0x0100<br>(2).  x = a^b^c<br>(3).  flag = f(x^a)^f(x^b)^f(x^c) 结果必有一位是1，因为flag不可能为0，因此flag在某一位上一定为1<br>       证明： f(x^a),f(x^b),f(x^c)分别表示x^a, x^b, x^c的右边第一个1的位置，并且<br>                 x^a = b^c, x^b=a^c,x^c=a^b<br>                 假设flag的值为0，那么f(x^a),f(x^b),f(x^c)都为0，即x^a, x^b, x^c为0，那么a=b=c矛盾<br>(4). f(x^a)^f(x^b)^f(x^c)的第m位为1，则f(x^a), f(x^b), f(x^c)必有1个或者3个第m位为1，因为只能是  0^0^1=1或者1^1^1=1<br>(5). x^a, x^b, x^c只有一个第m位为1<br>      证明(5) 由于(4)得出，f(x^a), f(x^b), f(x^c)必有1个或者3个第m位为1，(结论1)因此x^a, x^b, x^c的第m位最多是1个为1或者三个为1。因为f(x)表示x的右边第一个为1的位置，那么f(x)值的第m位为1(f(x)中只能有一个1)，也就表示x的第m位也为1.因此f(x)为1的位置和x为1的位置是对应的。假设x^a, x^b, x^c有三个在m位上为1。<br>      1&gt; 如果 x(m) =1 ———&gt;x(m)表示x的m位，下同。<br>           那么必有：a(m) = 0,b(m)=0, c(m)=0.<br>                 并且x(m) = a(m)^b(m)^c(m) = 0 矛盾。<br>      2&gt;如果 x(m) = 0:<br>           那么必有：a(m) = 1,b(m)= 1,c(m) = 1<br>                 并且x(m) = a(m)^b(m)^c(m) = 1 矛盾。<br>      综上所述，x^a, x^b, x^c有三个在m位上为1的假设是不成立的。因此只能有一个。<br>(6)flag = f (f(x^a)^f(x^b)^f(x^c))<br>(7)如果f(x^i) = flag的数都在一组里面，并且包含了所求的值，最后对这组值求异或即得结果。<br>代码如下：<br>int f(int x)<br>{<br>    return x&amp;(-x);<br>}<br>int find(int [] datas)<br>{<br>     int len=datas.length;<br>     int x = 0;<br>     for(int i=0;i&lt;len;i++){<br>          x ^= datas[i];<br>     }<br>     int flag =  0;<br>     for(int i=0;i&lt;len;i++){<br>          flag ^= f(x^datas[i]);<br>     }<br>     int b=0;<br>     for(int i=0;i&lt;len;i++){<br>         if(f(x^datas[i]) == f(flag))<br>               b ^= datas[i];<br>     }<br>     return b;<br>}</p>
+        <p>第一条、考虑用静态工厂代替构造器<br>        1.静态工厂方法与构造器不同的第一大优势在于，他们有名称<br>        2.静态工厂方法与构造器不同的第二大优势在于，不必在每次调用他们的时候都创建一个新的对象。<br><a id="more"></a><br>        3.第三大优势在于，他们可以返回原返回类型的任何子类型的对象。<br>        4.第四大优势在于，在创建参数化类型市里的时候，它们使代码变得简洁。<br>        缺点：<br>        1.类如果不含公有的或者受保护的构造器，就不能被子类化。<br>        2.他们与其他的静态方法实际上没有任何区别。<br>第二条、遇到多个构造器参数时要考虑构建器（builder 模式）<br>第三条、用私有的构造器或者枚举类型强化singleton属性<br>             （单元素的枚举类型已经成为实现singleton的最佳方法）<br>             使用enum关键字来实现单例模式的好处是这样非常简洁，并且无偿地提供了序列化机制，绝对防止多次实例化，即使是在面对复杂的序列化或者反射攻击的时候，代码如下：</p>
+<pre><code><span class="number">1.</span> <span class="keyword">public</span> <span class="keyword">enum</span> t{
+<span class="number">2.</span> INSTANCE;
+<span class="number">3.</span> <span class="keyword">private</span> String name=null;
+<span class="number">4.</span> <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">setName</span><span class="params">(String s)</span></span>{
+<span class="number">5.</span> name=s;
+<span class="number">6.</span> }
+<span class="number">7.</span> <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">print</span><span class="params">()</span></span>{
+<span class="number">8.</span> System.out.println(name);
+<span class="number">9.</span> }
+<span class="number">10.</span> <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String [] args)</span>
+11. </span>{
+<span class="number">12.</span> t test=t.INSTANCE;
+<span class="number">13.</span> test.setName(<span class="string">"huangby"</span>);
+<span class="number">14.</span> test.print();
+<span class="number">15.</span> t test1=t.INSTANCE;
+<span class="number">16.</span> test1.print();
+<span class="number">17.</span> }
+<span class="number">18.</span> }
+</code></pre><p>  结果如下：<br>            huangby<br>            huangby<br>第四套、通过私有的构造器强化不可实例化的能力<br>           企图通过将类做成抽象类来强化该类不可实例化，这是行不通的。<br>第五条、避免创建不必要的对象<br>              优先使用基本类型而不是装箱基本类型，要当心无意识的自动装箱。<br>第六条、消除过期的对象引用<br>第七条、避免使用终结方法finalizer<br>第八条、覆盖equals时请遵守通用规定。<br>第九条、覆盖equals时总要覆盖hashCode<br>              计算hash值的简单方法：<br>              1.把某个非零的常数值，比如17，保存在一个名为result的int类型的变量中。<br>              2.对于对象中的每个关键域f（指equals方法中涉及的每个域），完成以下步骤：<br>                 a.为该域计算int类型的散列码c.<br>                  1)如果该域是boolean类型，则计算(f?1:0).<br>                  2)如果该域是byte,char,short或者int类型，则计算(int)f<br>                  3)如果该域是long类型，则计算(int)(f^(f&gt;&gt;&gt;32)).<br>                  4)如果是double类型，则计算Double.doubleToLongBits(f),然后按照步骤3）计算。<br>                  5)如果该域是一个对象引用，并且该类的equals方法通过递归地调用equals的方式来比较域，则同样为这个域递归地调用hashCode。如果需要更复杂的比较，则为这个域计算一个“范式”，然后针对这个范式调用hashCode.如果这个域是null,则返回0（或者是一个常数，但是通常为0）<br>                 6)如果该域是一个数组，则要把每一个元素当做单独的域来处理。<br>                b.按照下面的公式，把把a中计算的散列码值合并到result中。<br>                      result=31*result+c;<br>             3.返回result.<br>第十条、始终要覆盖toString()方法。<br>第十一条、谨慎地覆盖clone()方法<br>             如果要覆盖一个非final类的clone方法，则应该返回一个通用调用super.clone而得到的对象。<br>             实际上，clone方法就是另外一个构造器；你必须确保他不会伤害到原始的对象，并确保正确地创建被克隆对象中的约束条件<br>            例如如果类中存在数组，则需要显示的克隆数组。代码如下：</p>
+<pre><code><span class="number">1</span>. @override public stack clone(){
+<span class="number">2</span>. stack <span class="literal">result</span> =(stack)super.clone;
+<span class="number">3</span>. <span class="literal">result</span>.elements=elements.clone();
+<span class="number">4</span>. <span class="keyword">return</span> <span class="literal">result</span>;
+<span class="number">5</span>. }
+   这里有个知识点，数组名调用colne方法，则会递归调用对象的clone方法，并且返回相同的类型。
+      clone架构与引用可变对象的final域的正常用法是不相兼容的。
+      所以实现cloneable接口的类都应该用一个公有的方法覆盖clone，此方法首先调用super.clone，然后修在任何需要修在的域。
+      另外一个实现对象拷贝的好办法是提供一个拷贝构造器或者拷贝工厂。
+      例如：
+<span class="number">1</span>. public <span class="type">Yum</span>(<span class="type">Yum</span> yum);
+      拷贝工厂是类似于拷贝构造器的静态工厂：
+<span class="number">1</span>. public <span class="keyword">static</span> <span class="type">Yum</span> newInstance(<span class="type">Yum</span> yum);
+</code></pre><p>第十二条、考虑实现comparable接口<br>          compareTo是comparable接口中唯一的方法。<br>第十三条、使类和成员的可访问性最小化。<br>第十四条、在公有类中使用访问方法而非公有域。<br>第十五条、使可变性最小化</p>
 
       
     </div>
@@ -250,15 +283,20 @@
     
 <nav id="article-nav">
   
-    <a href="/2015/09/20/java的byte转十六进制/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2015/09/20/JAVA并发编程/" id="article-nav-newer" class="article-nav-link-wrap">
       <strong class="article-nav-caption"><</strong>
       <div class="article-nav-title">
         
-          java的byte转换成十六进制表示
+          JAVA并发编程
         
       </div>
     </a>
   
+  
+    <a href="/2015/09/20/java编程思想/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">java编程思想</div>
+      <strong class="article-nav-caption">></strong>
+    </a>
   
 </nav>
 
@@ -285,7 +323,7 @@
 
 <div class="duoshuo">
 	<!-- 多说评论框 start -->
-	<div class="ds-thread" data-thread-key="异形数" data-title="异形数" data-url="http://huangby.github.io/2015/08/22/异形数/"></div>
+	<div class="ds-thread" data-thread-key="Effectivejava" data-title="Effective java" data-url="http://huangby.github.io/2015/09/20/Effectivejava/"></div>
 	<!-- 多说评论框 end -->
 	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
 	<script type="text/javascript">

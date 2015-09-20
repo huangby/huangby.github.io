@@ -3,17 +3,18 @@
 <head>
   <meta charset="utf-8">
   
-  <title>Tag: 源码分析 | wizard&#39;s blog</title>
+  <title>android4高级编程 | wizard&#39;s blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description">
-<meta property="og:type" content="website">
-<meta property="og:title" content="wizard's blog">
-<meta property="og:url" content="http://huangby.github.io/tags/源码分析/index.html">
+  <meta name="description" content="三、创建应用程序和activity1.可以通过配置自己的Content provider 来允许其他的程序访问，也可以访问其他应用程序的Content Provider.2.Broadcast Receivet 是intent监听器，Broadcast Receivet使应用程序可以监听到哪些匹配指定的过滤标准的intent广播。Broadcast Receivet会自动地启动应用程序来响应某个收">
+<meta property="og:type" content="article">
+<meta property="og:title" content="android4高级编程">
+<meta property="og:url" content="http://huangby.github.io/2015/09/20/android4高级编程/index.html">
 <meta property="og:site_name" content="wizard's blog">
-<meta property="og:description">
+<meta property="og:description" content="三、创建应用程序和activity1.可以通过配置自己的Content provider 来允许其他的程序访问，也可以访问其他应用程序的Content Provider.2.Broadcast Receivet 是intent监听器，Broadcast Receivet使应用程序可以监听到哪些匹配指定的过滤标准的intent广播。Broadcast Receivet会自动地启动应用程序来响应某个收">
+<meta property="og:updated_time" content="2015-09-20T08:49:50.173Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="wizard's blog">
-<meta name="twitter:description">
+<meta name="twitter:title" content="android4高级编程">
+<meta name="twitter:description" content="三、创建应用程序和activity1.可以通过配置自己的Content provider 来允许其他的程序访问，也可以访问其他应用程序的Content Provider.2.Broadcast Receivet 是intent监听器，Broadcast Receivet使应用程序可以监听到哪些匹配指定的过滤标准的intent广播。Broadcast Receivet会自动地启动应用程序来响应某个收">
   
     <link rel="alternative" href="/atom.xml" title="wizard&#39;s blog" type="application/atom+xml">
   
@@ -198,57 +199,119 @@
 		</header>				
 	</div>
 </nav>
-      <div class="body-wrap">
+      <div class="body-wrap"><article id="post-android4高级编程" class="article article-type-post" itemscope itemprop="blogPost">
   
-  
-    
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2015" class="archive-year">2015</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2015/09/20/HashMap源码分析/" class="archive-article-date">
-  	<time datetime="2015-09-19T16:00:00.000Z" itemprop="datePublished">9月 20</time>
+    <div class="article-meta">
+      <a href="/2015/09/20/android4高级编程/" class="article-date">
+  	<time datetime="2015-09-19T16:00:00.000Z" itemprop="datePublished">2015-09-20</time>
 </a>
-        </div>
-    	 
+    </div>
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2015/09/20/HashMap源码分析/">HashMap源码分析</a>
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      android4高级编程
     </h1>
   
 
-        <div class="article-info info-on-right">
-          
+      </header>
+      
+      <div class="article-info article-info-post">
+        
 	<div class="article-tag tagcloud">
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JAVA/">JAVA</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/源码分析/">源码分析</a></li></ul>
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/android/">android</a></li></ul>
 	</div>
 
-          
+        
 	<div class="article-category tagcloud">
-	<a class="article-category-link" href="/categories/JAVA/">JAVA</a>
+	<a class="article-category-link" href="/categories/android/">android</a>
 	</div>
 
 
-        </div>
         <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
-  
-
+      </div>
+      
     
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>三、创建应用程序和activity<br>1.可以通过配置自己的Content provider 来允许其他的程序访问，也可以访问其他应用程序的Content Provider.<br>2.Broadcast Receivet 是intent监听器，Broadcast Receivet使应用程序可以监听到哪些匹配指定的过滤标准的intent广播。Broadcast Receivet会自动地启动应用程序来响应某个收到的intent，这个特点使他们成为了事件驱动的应用程序的最佳选择。<br><a id="more"></a><br>3.Notification 运行向用户发送信号，但却不会过分吸引他们的注意力或者打断他们当前的activity。他们是应用程序不可见或者不活动时（特别是service或者broadcast receive）吸引用户注意力的首选方法。</p>
+<ol>
+<li>manifest文件中指定installLocation 属性可以指定安装程序是否可以安装到SD卡中—值为perferExternal或auto，前者表示只有有就安装到外部，后者表示取决于系统。<br>5 application类的实现在本质上单态的，并且应该作为单态进行实现，以便提供对其方法和成员变量的访问。注册之后，可以被实例，因此可以作为全局使用。<br>6 大部分activity都被设计成占据整个屏幕，但是也可以创建半透明的或者浮动的activity。<br>四、创建用户界面<br>1.Fragment必须嵌入到activity中<br>2.LinearLayout 指定weight属性，以控制每个子视图在可用空间内的相对大小。<br>3.当包含merge标签的布局被添加到另外一个布局中，该布局的merge节点会被删除，而该布局的子view会被直接添加到新的父布局中。结合include标签更有用，include标签用来把一个布局插入到另外一个布局<br>4想要在复杂的布局内填充的view的数量最少，可以使用viewstub，其工作原理就像一个延迟的include标签—-只有显示地调用inflate()方法或被置为可见的时候，这个stub才会被填充。<br>5.通常，fragment的onAttach事件用来获取一个fragment的父activity的引用，为进一步的初始化作准备。<br>6与activity不同，fragment的UI不在onCreat方法中初始化，而是在onCreateView中。</li>
+</ol>
+
+      
+    </div>
+    
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2015/09/20/android学习/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption"><</strong>
+      <div class="article-nav-title">
+        
+          android学习
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2015/09/20/路线/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">路线(转)</div>
+      <strong class="article-nav-caption">></strong>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+<div class="share">
+	<!-- JiaThis Button BEGIN -->
+	<div class="jiathis_style">
+		<span class="jiathis_txt">分享到：</span>
+		<a class="jiathis_button_tsina"></a>
+		<a class="jiathis_button_cqq"></a>
+		<a class="jiathis_button_douban"></a>
+		<a class="jiathis_button_weixin"></a>
+		<a class="jiathis_button_tumblr"></a>
+		<a href="http://www.jiathis.com/share" class="jiathis jiathis_txt jtico jtico_jiathis" target="_blank"></a>
+	</div>
+	<script type="text/javascript" src="http://v3.jiathis.com/code/jia.js?uid=1405949716054953" charset="utf-8"></script>
+	<!-- JiaThis Button END -->
+</div>
+
+
+
+<div class="duoshuo">
+	<!-- 多说评论框 start -->
+	<div class="ds-thread" data-thread-key="android4高级编程" data-title="android4高级编程" data-url="http://huangby.github.io/2015/09/20/android4高级编程/"></div>
+	<!-- 多说评论框 end -->
+	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+	<script type="text/javascript">
+	var duoshuoQuery = {short_name:"true"};
+	(function() {
+		var ds = document.createElement('script');
+		ds.type = 'text/javascript';ds.async = true;
+		ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+		ds.charset = 'UTF-8';
+		(document.getElementsByTagName('head')[0] 
+		 || document.getElementsByTagName('body')[0]).appendChild(ds);
+	})();
+	</script>
+	<!-- 多说公共JS代码 end -->
+</div>
+
+
+
 
 </div>
       <footer id="footer">
@@ -274,9 +337,9 @@
 		mathjax: true,
 		animate: true,
 		isHome: false,
-		isPost: false,
+		isPost: true,
 		isArchive: false,
-		isTag: true,
+		isTag: false,
 		isCategory: false,
 		open_in_new: false
 	}

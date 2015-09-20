@@ -3,18 +3,18 @@
 <head>
   <meta charset="utf-8">
   
-  <title>异形数 | wizard&#39;s blog</title>
+  <title>Linux常用命令 | wizard&#39;s blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="在一个长度为n的整形数组a里，除了三个数字只出现一次外，其他的数字都出现了2次。请写程序输出任意一个只出现一次的数字，程序时间和空间复杂度越小越好。例如： a = {1,3,7,9,5,9,4,3,6,1,7}，输出4或5或6">
+  <meta name="description" content="一、软连接：   ln -s 源文件 目标文件其类型为：lwrxwrxwrx（所有的人都可以访问，但是最终取决于目标文件）等同于window下的快捷方式">
 <meta property="og:type" content="article">
-<meta property="og:title" content="异形数">
-<meta property="og:url" content="http://huangby.github.io/2015/08/22/异形数/index.html">
+<meta property="og:title" content="Linux常用命令">
+<meta property="og:url" content="http://huangby.github.io/2015/09/20/linux常用命令/index.html">
 <meta property="og:site_name" content="wizard's blog">
-<meta property="og:description" content="在一个长度为n的整形数组a里，除了三个数字只出现一次外，其他的数字都出现了2次。请写程序输出任意一个只出现一次的数字，程序时间和空间复杂度越小越好。例如： a = {1,3,7,9,5,9,4,3,6,1,7}，输出4或5或6">
-<meta property="og:updated_time" content="2015-09-20T08:04:27.768Z">
+<meta property="og:description" content="一、软连接：   ln -s 源文件 目标文件其类型为：lwrxwrxwrx（所有的人都可以访问，但是最终取决于目标文件）等同于window下的快捷方式">
+<meta property="og:updated_time" content="2015-09-20T09:39:08.901Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="异形数">
-<meta name="twitter:description" content="在一个长度为n的整形数组a里，除了三个数字只出现一次外，其他的数字都出现了2次。请写程序输出任意一个只出现一次的数字，程序时间和空间复杂度越小越好。例如： a = {1,3,7,9,5,9,4,3,6,1,7}，输出4或5或6">
+<meta name="twitter:title" content="Linux常用命令">
+<meta name="twitter:description" content="一、软连接：   ln -s 源文件 目标文件其类型为：lwrxwrxwrx（所有的人都可以访问，但是最终取决于目标文件）等同于window下的快捷方式">
   
     <link rel="alternative" href="/atom.xml" title="wizard&#39;s blog" type="application/atom+xml">
   
@@ -199,11 +199,11 @@
 		</header>				
 	</div>
 </nav>
-      <div class="body-wrap"><article id="post-异形数" class="article article-type-post" itemscope itemprop="blogPost">
+      <div class="body-wrap"><article id="post-linux常用命令" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a href="/2015/08/22/异形数/" class="article-date">
-  	<time datetime="2015-08-21T16:00:00.000Z" itemprop="datePublished">2015-08-22</time>
+      <a href="/2015/09/20/linux常用命令/" class="article-date">
+  	<time datetime="2015-09-20T09:39:08.901Z" itemprop="datePublished">2015-09-20</time>
 </a>
     </div>
   
@@ -216,7 +216,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      异形数
+      Linux常用命令
     </h1>
   
 
@@ -225,12 +225,12 @@
       <div class="article-info article-info-post">
         
 	<div class="article-tag tagcloud">
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/算法/">算法</a></li></ul>
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Linux/">Linux</a></li></ul>
 	</div>
 
         
 	<div class="article-category tagcloud">
-	<a class="article-category-link" href="/categories/算法/">算法</a>
+	<a class="article-category-link" href="/categories/Linux/">Linux</a>
 	</div>
 
 
@@ -240,7 +240,12 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>在一个长度为n的整形数组a里，除了三个数字只出现一次外，其他的数字都出现了2次。请写程序输出任意一个只出现一次的数字，程序时间和空间复杂度越小越好。<br>例如： a = {1,3,7,9,5,9,4,3,6,1,7}，输出4或5或6<br><a id="more"></a><br>算法流程：<br>(1). f(x) = x&amp;(-x)   —–&gt;该函数可以得出x从右边开始出现1的位置，比如 f(0x1100) = 0x0100<br>(2).  x = a^b^c<br>(3).  flag = f(x^a)^f(x^b)^f(x^c) 结果必有一位是1，因为flag不可能为0，因此flag在某一位上一定为1<br>       证明： f(x^a),f(x^b),f(x^c)分别表示x^a, x^b, x^c的右边第一个1的位置，并且<br>                 x^a = b^c, x^b=a^c,x^c=a^b<br>                 假设flag的值为0，那么f(x^a),f(x^b),f(x^c)都为0，即x^a, x^b, x^c为0，那么a=b=c矛盾<br>(4). f(x^a)^f(x^b)^f(x^c)的第m位为1，则f(x^a), f(x^b), f(x^c)必有1个或者3个第m位为1，因为只能是  0^0^1=1或者1^1^1=1<br>(5). x^a, x^b, x^c只有一个第m位为1<br>      证明(5) 由于(4)得出，f(x^a), f(x^b), f(x^c)必有1个或者3个第m位为1，(结论1)因此x^a, x^b, x^c的第m位最多是1个为1或者三个为1。因为f(x)表示x的右边第一个为1的位置，那么f(x)值的第m位为1(f(x)中只能有一个1)，也就表示x的第m位也为1.因此f(x)为1的位置和x为1的位置是对应的。假设x^a, x^b, x^c有三个在m位上为1。<br>      1&gt; 如果 x(m) =1 ———&gt;x(m)表示x的m位，下同。<br>           那么必有：a(m) = 0,b(m)=0, c(m)=0.<br>                 并且x(m) = a(m)^b(m)^c(m) = 0 矛盾。<br>      2&gt;如果 x(m) = 0:<br>           那么必有：a(m) = 1,b(m)= 1,c(m) = 1<br>                 并且x(m) = a(m)^b(m)^c(m) = 1 矛盾。<br>      综上所述，x^a, x^b, x^c有三个在m位上为1的假设是不成立的。因此只能有一个。<br>(6)flag = f (f(x^a)^f(x^b)^f(x^c))<br>(7)如果f(x^i) = flag的数都在一组里面，并且包含了所求的值，最后对这组值求异或即得结果。<br>代码如下：<br>int f(int x)<br>{<br>    return x&amp;(-x);<br>}<br>int find(int [] datas)<br>{<br>     int len=datas.length;<br>     int x = 0;<br>     for(int i=0;i&lt;len;i++){<br>          x ^= datas[i];<br>     }<br>     int flag =  0;<br>     for(int i=0;i&lt;len;i++){<br>          flag ^= f(x^datas[i]);<br>     }<br>     int b=0;<br>     for(int i=0;i&lt;len;i++){<br>         if(f(x^datas[i]) == f(flag))<br>               b ^= datas[i];<br>     }<br>     return b;<br>}</p>
+        <p>一、软连接：<br>   ln -s 源文件 目标文件<br>其类型为：lwrxwrxwrx（所有的人都可以访问，但是最终取决于目标文件）<br>等同于window下的快捷方式<br><a id="more"></a><br> 二、硬连接=cp -p+同步更新<br> ln 源文件 目标文件<br>其类型为：-wrx…….(同源文件)<br>其特点是：和源文件同步，（时间，大小，权限等等）[类似于 cp -p命令,需要加入-p 选项才能保证拷贝的时间一样]<br>但是又不一样的是，硬连接是实时同步的。</p>
+<p>删除源文件后，软链接就不起作用了，但是硬链接可以使用，因此可以使用硬连接进行文件实时备份</p>
+<p>每个文件必须有一个inode节点（数字标识）    使用命令 ls -i查看文件的inode节点<br>硬链接和源文件有相同的inode节点<br>一个inode节点可以映射多个文件<br>软连接可以夸分区，但是硬链接不能夸分区。</p>
+<h2 id="三、chmod_改权限">三、chmod  改权限</h2><h2 id="代表字符_权限_对文件含义_对目录含义">代表字符      权限               对文件含义                         对目录含义</h2><h2 id="r_读权限_可以查看文件内容_可以列出目录中的内容">r                读权限        可以查看文件内容             可以列出目录中的内容</h2><h2 id="w_写权限_可以修改文件的内容_可以在目录中创建/删除文件">w              写权限         可以修改文件的内容         可以在目录中创建/删除文件</h2><h2 id="x_执行权限_可以执行文件_可以进入目录">x              执行权限       可以执行文件                    可以进入目录</h2><p>也就是说，一个文件(不是目录)，就算自己没有执行权限，也可以删除该文件，只要有在此文件所在目录有可执行权限就行。<br>chown 改拥有者（另添加用户  1.useradd 用户名，2.passwd 用户名）<br>chgrp  更改所在组<br>umask (-S)查看缺省的权限,得出的如果是数字，表示的是权限掩码值，需要将777减去相应的值(第一个数字代表特殊权限位，后三个才是权限掩码)，虽然如此，但是linux里面有这样的规则，缺省的文件的权限都没有可执行的权限。因此就算umask得出的有可执行权限，但是新建的文件没有可执行权限。<br>umask 权限掩码值(=777-权限值)   这样就可以更改系统的缺省权限。</p>
+<p>下面是有关查找的一些命令<br>四、which +命令  可以查找到命令所在路径<br>命令所在路径可以判断哪个命令能不能被使用。位于bin或者/usr/bin下的被所有用户使用。位于sbin下的只能被root使用。which能够查看到命令相关的别名。<br>whereis不仅仅可以找到路径，还能够提供命令帮助文件所在位置。<br>上述只能找到命令。</p>
+<p>五、find查找文件所在路径。（建议不要在根目录下查找）<br>find [搜索路径] [搜索关键字] [连接符]<br>搜索关键字有下面的用法：<br>       -name    根据文件名查找(该名为文件全名或者通配符)<br>       -size     文件大小(以数据块block=512字节为单位)<br>                   【+2048：大于2048；-2048：小于2048；=2048等于2048】<br>       -user  用户文件（查找隶属于所有者的文件）<br>       -type  通过类型<br>       -inum 通过查找inode节点<br>       -ctime/atime/mtime(根据时间查找，以天为单位)【cmin/amin/mmin以分钟为单位】<br>         其中c：表示change(改变-文件属性)<br>                a：access（访问）<br>                m：modify（修改-内容）<br>                【-表示在…之内，+表示…超过】<br>find中的连接符1：-a  逻辑与，-o逻辑或<br>                        2：-exec 命令 { } \;  {}表示find的查询结果，\表示转义符，使用命令的本身的含义<br>                             -ok 询问连接符<br>六、(linux特有命令)locate +文件名（在系统的文件数据库里面查找，所以很快，但是有时候会出现找不到的情况，因为存在的文件可能还没有及时更新到数据库里面，而find命令是在整个硬盘里面查找）<br>可以手动使用updatedb命令更新数据库。<br>查看文件内容—cat、more、tail、head、grep<br>七、grep +【指定的字符串】【源文件】<br>八、man 查看命令/配置文件的帮助文件(配置文件不能打路径，直接使用文件名)<br>       man会优先查看命令的配置（1表示命令的帮助，5表示配置文件的帮助），当命令和配置文件重名，则    使用man 5 +配置文件名<br>九、whatis  获得索引的简单信息<br>命令+【–help】 可以获得命令的帮助<br>help命令可以获得内置命令。<br>十压缩解压—–gzip+文件名<br>linux的所有压缩格式在windows可以任意解压，但是想反则不是。<br>gizp压缩特点：<br>       1、只能压缩文件。<br>       2、不保留源文件。<br>gunzip/gzip -d 解压<br>十一、tar命令(.tar.gz)（打包压缩（解压解包）—gzip只是压缩/解压）<br>          -c 产生.tar打包文件<br>          -v显示详细信息<br>          -f指定压缩后的文件名<br>          -z打包同时压缩<br>          -x解包.tar文件<br>    tar [-zcvf] 包文件名 源文件名<br>十二、zip——-保留源文件<br>          zip 压缩的文件名 源文件<br>          zip -r 目录名 源目录文件名<br>十三、write +用户名【给用户发送消息】 【ctrl+D结束】<br>十四、wall 向所有人发送消息<br>          wc -l   统计行数<br>快捷键<br>       ctrl+l   清屏<br>       ctrl+u  清楚当前行命令<br>       history 查看之前的命令<br>十五、命令重命令<br>           alias  别名=命令<br>           unalias 删除别名<br>十六、输入/输出重定向（0：标准输出，1：标准输入，2标准错误输出）<br>          >(输出，会被覆盖)  >&gt;(输出，可以追加)      \&lt;(输入)   2>(错误输出)<br>十七、将一个命令的输出传送给另外一个命令，作为他的输入（命令|命令|命令……）</p>
 
       
     </div>
@@ -250,15 +255,20 @@
     
 <nav id="article-nav">
   
-    <a href="/2015/09/20/java的byte转十六进制/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2015/09/20/mongodb使用/" id="article-nav-newer" class="article-nav-link-wrap">
       <strong class="article-nav-caption"><</strong>
       <div class="article-nav-title">
         
-          java的byte转换成十六进制表示
+          mongodb使用(转载)
         
       </div>
     </a>
   
+  
+    <a href="/2015/09/20/python正则表达式/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">Python正则表达式（转载）</div>
+      <strong class="article-nav-caption">></strong>
+    </a>
   
 </nav>
 
@@ -285,7 +295,7 @@
 
 <div class="duoshuo">
 	<!-- 多说评论框 start -->
-	<div class="ds-thread" data-thread-key="异形数" data-title="异形数" data-url="http://huangby.github.io/2015/08/22/异形数/"></div>
+	<div class="ds-thread" data-thread-key="linux常用命令" data-title="Linux常用命令" data-url="http://huangby.github.io/2015/09/20/linux常用命令/"></div>
 	<!-- 多说评论框 end -->
 	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
 	<script type="text/javascript">

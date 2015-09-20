@@ -3,18 +3,18 @@
 <head>
   <meta charset="utf-8">
   
-  <title>异形数 | wizard&#39;s blog</title>
+  <title>java socket总结 | wizard&#39;s blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="在一个长度为n的整形数组a里，除了三个数字只出现一次外，其他的数字都出现了2次。请写程序输出任意一个只出现一次的数字，程序时间和空间复杂度越小越好。例如： a = {1,3,7,9,5,9,4,3,6,1,7}，输出4或5或6">
+  <meta name="description" content="服务器端：          1.首先设置端口              ServerSocket ss=new ServerSocket(8888);          2.监听是否有客服端连接              Socket s=ss.accept();               这是一个阻塞函数，只有没有客服端连接时，一直处于当前位置。">
 <meta property="og:type" content="article">
-<meta property="og:title" content="异形数">
-<meta property="og:url" content="http://huangby.github.io/2015/08/22/异形数/index.html">
+<meta property="og:title" content="java socket总结">
+<meta property="og:url" content="http://huangby.github.io/2015/09/20/java_socket/index.html">
 <meta property="og:site_name" content="wizard's blog">
-<meta property="og:description" content="在一个长度为n的整形数组a里，除了三个数字只出现一次外，其他的数字都出现了2次。请写程序输出任意一个只出现一次的数字，程序时间和空间复杂度越小越好。例如： a = {1,3,7,9,5,9,4,3,6,1,7}，输出4或5或6">
-<meta property="og:updated_time" content="2015-09-20T08:04:27.768Z">
+<meta property="og:description" content="服务器端：          1.首先设置端口              ServerSocket ss=new ServerSocket(8888);          2.监听是否有客服端连接              Socket s=ss.accept();               这是一个阻塞函数，只有没有客服端连接时，一直处于当前位置。">
+<meta property="og:updated_time" content="2015-09-20T08:53:07.708Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="异形数">
-<meta name="twitter:description" content="在一个长度为n的整形数组a里，除了三个数字只出现一次外，其他的数字都出现了2次。请写程序输出任意一个只出现一次的数字，程序时间和空间复杂度越小越好。例如： a = {1,3,7,9,5,9,4,3,6,1,7}，输出4或5或6">
+<meta name="twitter:title" content="java socket总结">
+<meta name="twitter:description" content="服务器端：          1.首先设置端口              ServerSocket ss=new ServerSocket(8888);          2.监听是否有客服端连接              Socket s=ss.accept();               这是一个阻塞函数，只有没有客服端连接时，一直处于当前位置。">
   
     <link rel="alternative" href="/atom.xml" title="wizard&#39;s blog" type="application/atom+xml">
   
@@ -199,11 +199,11 @@
 		</header>				
 	</div>
 </nav>
-      <div class="body-wrap"><article id="post-异形数" class="article article-type-post" itemscope itemprop="blogPost">
+      <div class="body-wrap"><article id="post-java_socket" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a href="/2015/08/22/异形数/" class="article-date">
-  	<time datetime="2015-08-21T16:00:00.000Z" itemprop="datePublished">2015-08-22</time>
+      <a href="/2015/09/20/java_socket/" class="article-date">
+  	<time datetime="2015-09-20T08:53:07.708Z" itemprop="datePublished">2015-09-20</time>
 </a>
     </div>
   
@@ -216,7 +216,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      异形数
+      java socket总结
     </h1>
   
 
@@ -225,12 +225,12 @@
       <div class="article-info article-info-post">
         
 	<div class="article-tag tagcloud">
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/算法/">算法</a></li></ul>
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JAVA/">JAVA</a></li></ul>
 	</div>
 
         
 	<div class="article-category tagcloud">
-	<a class="article-category-link" href="/categories/算法/">算法</a>
+	<a class="article-category-link" href="/categories/JAVA/">JAVA</a>
 	</div>
 
 
@@ -240,8 +240,63 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>在一个长度为n的整形数组a里，除了三个数字只出现一次外，其他的数字都出现了2次。请写程序输出任意一个只出现一次的数字，程序时间和空间复杂度越小越好。<br>例如： a = {1,3,7,9,5,9,4,3,6,1,7}，输出4或5或6<br><a id="more"></a><br>算法流程：<br>(1). f(x) = x&amp;(-x)   —–&gt;该函数可以得出x从右边开始出现1的位置，比如 f(0x1100) = 0x0100<br>(2).  x = a^b^c<br>(3).  flag = f(x^a)^f(x^b)^f(x^c) 结果必有一位是1，因为flag不可能为0，因此flag在某一位上一定为1<br>       证明： f(x^a),f(x^b),f(x^c)分别表示x^a, x^b, x^c的右边第一个1的位置，并且<br>                 x^a = b^c, x^b=a^c,x^c=a^b<br>                 假设flag的值为0，那么f(x^a),f(x^b),f(x^c)都为0，即x^a, x^b, x^c为0，那么a=b=c矛盾<br>(4). f(x^a)^f(x^b)^f(x^c)的第m位为1，则f(x^a), f(x^b), f(x^c)必有1个或者3个第m位为1，因为只能是  0^0^1=1或者1^1^1=1<br>(5). x^a, x^b, x^c只有一个第m位为1<br>      证明(5) 由于(4)得出，f(x^a), f(x^b), f(x^c)必有1个或者3个第m位为1，(结论1)因此x^a, x^b, x^c的第m位最多是1个为1或者三个为1。因为f(x)表示x的右边第一个为1的位置，那么f(x)值的第m位为1(f(x)中只能有一个1)，也就表示x的第m位也为1.因此f(x)为1的位置和x为1的位置是对应的。假设x^a, x^b, x^c有三个在m位上为1。<br>      1&gt; 如果 x(m) =1 ———&gt;x(m)表示x的m位，下同。<br>           那么必有：a(m) = 0,b(m)=0, c(m)=0.<br>                 并且x(m) = a(m)^b(m)^c(m) = 0 矛盾。<br>      2&gt;如果 x(m) = 0:<br>           那么必有：a(m) = 1,b(m)= 1,c(m) = 1<br>                 并且x(m) = a(m)^b(m)^c(m) = 1 矛盾。<br>      综上所述，x^a, x^b, x^c有三个在m位上为1的假设是不成立的。因此只能有一个。<br>(6)flag = f (f(x^a)^f(x^b)^f(x^c))<br>(7)如果f(x^i) = flag的数都在一组里面，并且包含了所求的值，最后对这组值求异或即得结果。<br>代码如下：<br>int f(int x)<br>{<br>    return x&amp;(-x);<br>}<br>int find(int [] datas)<br>{<br>     int len=datas.length;<br>     int x = 0;<br>     for(int i=0;i&lt;len;i++){<br>          x ^= datas[i];<br>     }<br>     int flag =  0;<br>     for(int i=0;i&lt;len;i++){<br>          flag ^= f(x^datas[i]);<br>     }<br>     int b=0;<br>     for(int i=0;i&lt;len;i++){<br>         if(f(x^datas[i]) == f(flag))<br>               b ^= datas[i];<br>     }<br>     return b;<br>}</p>
-
+        <p>服务器端：<br>          1.首先设置端口<br>              ServerSocket ss=new ServerSocket(8888);<br>          2.监听是否有客服端连接<br>              Socket s=ss.accept();<br>               这是一个阻塞函数，只有没有客服端连接时，一直处于当前位置。<br><a id="more"></a><br>          3.获取输入流和输出流<br>              BufferedReader br=new BufferedReader(<br>                                       new InputStreamReader(<br>                                       s.getInputStream()))；<br>              BufferedWriter bw =new BufferedWriter(<br>                                                new OutputStreamWriter(<br>                                                s.getOutputStream()));<br>          4.接下来就是循环接收和发送部分，注意上面的得到输入/输出流不能在循环里面。<br>            使用br.readLine()，获取一行，注意的是，这里只是得到数据中的一行，如果数据里面有多行，可以多次调用该方法。<br>            使用bw.write()写入数据。写入之后需要调用<br>                   bw.flush()方法，这样才能发送。(如果不调用该方法，接收端就不能立刻接收到该消息，要知道调用该方法)<br>            这里还需注意的是，br.readLine()（实际上是s.getInputStream()方法）方法，在没有接收到数据时，会等待。<br>客户端：<br>           1.设置需要连接的IP地址和端口<br>             Socket s=new Socket(“127.0.0.1”,8888);<br>           2..获取输入流和输出流(同服务器端)<br>           3.接下来就是循环接收和发送部分，注意上面的得到输入/输出流也不能在循环里面。（同服务器端）<br>下面是个例子：<br>服务器：</p>
+<pre><code><span class="number">1.</span> <span class="keyword">public</span> <span class="keyword">class</span> server {
+<span class="number">2.</span> <span class="keyword">private</span> BufferedWriter out=null;
+<span class="number">3.</span> <span class="keyword">private</span> <span class="keyword">int</span> i=<span class="number">0</span>;
+<span class="number">4.</span> server() throws IOException{
+<span class="number">5.</span> ServerSocket s=<span class="keyword">new</span> ServerSocket(<span class="number">8888</span>);
+<span class="number">6.</span> System.out.println(<span class="string">"正在监听....................."</span>);
+<span class="number">7.</span> Socket socket=s.accept();
+<span class="number">8.</span> System.out.println(<span class="string">"收到"</span>);
+<span class="number">9.</span> out=<span class="keyword">new</span> BufferedWriter(
+<span class="number">10.</span> <span class="keyword">new</span> OutputStreamWriter(
+<span class="number">11.</span> socket.getOutputStream()));
+<span class="number">12.</span> oper();
+<span class="number">13.</span> }
+<span class="number">14.</span> <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">oper</span><span class="params">()</span> throws IOException</span>{
+<span class="number">15.</span> <span class="keyword">while</span>(<span class="literal">true</span>){
+<span class="number">16.</span> out.write(<span class="string">"this is no message\n"</span> +
+<span class="number">17.</span> <span class="string">"so so so\n"</span>);
+<span class="number">18.</span> out.flush();
+<span class="number">19.</span> <span class="keyword">try</span> {
+<span class="number">20.</span> Thread.sleep(<span class="number">1000</span>);
+<span class="number">21.</span> } <span class="keyword">catch</span> (InterruptedException e) {
+<span class="number">22.</span> <span class="comment">// TODO Auto-generated catch block</span>
+<span class="number">23.</span> e.printStackTrace();
+<span class="number">24.</span> }
+<span class="number">25.</span> }
+<span class="number">26.</span> }
+<span class="number">27.</span> <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> throws IOException </span>{
+<span class="number">28.</span> <span class="comment">// TODO Auto-generated method stub</span>
+<span class="number">29.</span> <span class="keyword">new</span> server();
+<span class="number">30.</span> }
+<span class="number">31.</span> }
+</code></pre><p>客户端：</p>
+<pre><code><span class="number">1.</span> <span class="keyword">public</span> <span class="keyword">class</span> client {
+<span class="number">2.</span> <span class="keyword">private</span> BufferedReader br=null;
+<span class="number">3.</span> <span class="keyword">private</span> BufferedWriter bw=null;
+<span class="number">4.</span> Socket s=null;
+<span class="number">5.</span> client() throws UnknownHostException, IOException
+<span class="number">6.</span> {
+<span class="number">7.</span> s=<span class="keyword">new</span> Socket(<span class="string">"127.0.0.1"</span>,<span class="number">8888</span>);
+<span class="number">8.</span> br=<span class="keyword">new</span> BufferedReader(
+<span class="number">9.</span> <span class="keyword">new</span> InputStreamReader(
+<span class="number">10.</span> s.getInputStream()));
+<span class="number">11.</span> oper();
+<span class="number">12.</span> }
+<span class="number">13.</span> <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">oper</span><span class="params">()</span> throws IOException</span>{
+<span class="number">14.</span> <span class="keyword">while</span>(<span class="literal">true</span>){
+<span class="number">15.</span> System.out.println(<span class="string">"获得数据"</span>);
+<span class="number">16.</span> System.out.println(br.readLine()+<span class="string">" "</span>+br.readLine());
+<span class="number">17.</span> }
+<span class="number">18.</span> }
+<span class="number">19.</span> <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> throws UnknownHostException, IOException </span>{
+<span class="number">20.</span> <span class="comment">// TODO Auto-generated method stub</span>
+<span class="number">21.</span> <span class="keyword">new</span> client();
+<span class="number">22.</span> }
+<span class="number">23.</span> }
+</code></pre>
       
     </div>
     
@@ -250,15 +305,20 @@
     
 <nav id="article-nav">
   
-    <a href="/2015/09/20/java的byte转十六进制/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2015/09/20/python正则表达式/" id="article-nav-newer" class="article-nav-link-wrap">
       <strong class="article-nav-caption"><</strong>
       <div class="article-nav-title">
         
-          java的byte转换成十六进制表示
+          Python正则表达式（转载）
         
       </div>
     </a>
   
+  
+    <a href="/2015/09/20/javascript权威指南/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">javascript权威指南</div>
+      <strong class="article-nav-caption">></strong>
+    </a>
   
 </nav>
 
@@ -285,7 +345,7 @@
 
 <div class="duoshuo">
 	<!-- 多说评论框 start -->
-	<div class="ds-thread" data-thread-key="异形数" data-title="异形数" data-url="http://huangby.github.io/2015/08/22/异形数/"></div>
+	<div class="ds-thread" data-thread-key="java_socket" data-title="java socket总结" data-url="http://huangby.github.io/2015/09/20/java_socket/"></div>
 	<!-- 多说评论框 end -->
 	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
 	<script type="text/javascript">
